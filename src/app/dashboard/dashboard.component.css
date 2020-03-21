@@ -1,0 +1,22 @@
+
+#design-block{
+    background: url(../../assets/starsWaterHeader.jpg);
+    max-width: 100%;
+    /* background-size: 40px; */
+    height: 22rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    /* background-color: red; */
+    /* max-height: 40%; */
+}
+
+#grad1{
+    height: 200px;
+    background-color: #cccccc;
+    background-image: linear-gradient(red, yellow);
+}
+
+h1{
+    color: white;
+}
