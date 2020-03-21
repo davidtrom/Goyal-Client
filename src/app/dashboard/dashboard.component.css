@@ -1,12 +1,12 @@
 
 #design-block{
-    background: url(../../assets/starsWaterHeader.jpg);
+    background: url(../../assets/meditation.jpg);
     max-width: 100%;
     /* background-size: 40px; */
-    height: 22rem;
-    background-size: contain;
+    height: 25rem;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
     /* background-color: red; */
     /* max-height: 40%; */
 }
@@ -17,6 +17,32 @@
     background-image: linear-gradient(red, yellow);
 }
 
-h1{
+#logo{
+    padding-top: 3%;
+    padding-left: 30%;
+    padding-right: 1%;
+}
+
+.title{
+    /* padding-top: 2.5%; */
+    padding-left: 30%;
     color: white;
 }
+
+#listItems{
+    margin: 0 auto;
+}
+
+h1{
+    /* display: inline; */
+    /* padding-top: 5%; */
+    color: white;
+}
+
+#navigationBar{
+    max-width: 100%; 
+    font-size: 15px; 
+    font-weight: bold;
+    background-color: rgb(96, 59, 228);
+}
+
