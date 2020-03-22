@@ -7,11 +7,6 @@
     background-repeat: no-repeat;
 }
 
-#grad1{
-    height: 50rem;
-    background-color: #cccccc;
-    background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
-}
 
 #logo{
     padding-left: 30%;
@@ -23,20 +18,20 @@
     color: white;
 }
 
-#listItems{
+/* #listItems{
     margin: 0 auto;
-}
+} */
 
 h1{
     color: white;
 }
 
-#navigationBar{
+/* #navigationBar{
     max-width: 100%; 
     font-size: 15px; 
     font-weight: bold;
     background-color: rgb(96, 59, 228);
-}
+} */
 
 .page-links{
     padding-top: 2%;
@@ -50,4 +45,43 @@ a{
     padding-right: 2%;
 }
 
+/* .container{
+    border: 3px firebrick solid;
+    margin-left: 8%;
+    margin-right: 8%;
+} */
 
+.picture{
+    padding-top: 6%;
+    margin-left: 55%;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 5px;  
+}
+
+.row::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.clear{
+    clear: both;
+}
+
+#grad1{
+    height: 40rem;
+    /* display: inline-block; */
+    /* flex-wrap: wrap; */
+    /* background-color: #cccccc; */
+    background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
+    text-align: center;
+}
+
+#background-info{
+    padding-top: 6%;
+    margin-right: 75%;
+}
