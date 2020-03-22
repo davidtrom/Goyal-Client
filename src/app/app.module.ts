@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { ProcessComponent } from './process/process.component';
 import { SpecialtiesComponent } from './specialties/specialties.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SpecialtiesComponent } from './specialties/specialties.component';
     ContactComponent,
     InsuranceComponent,
     ProcessComponent,
-    SpecialtiesComponent
+    SpecialtiesComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,

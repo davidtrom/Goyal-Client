@@ -10,7 +10,7 @@
 #grad1{
     height: 50rem;
     background-color: #cccccc;
-    background-image: linear-gradient(red, yellow);
+    background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
 }
 
 #logo{
