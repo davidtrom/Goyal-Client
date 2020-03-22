@@ -2,29 +2,23 @@
 #design-block{
     background: url(../../assets/meditation.jpg);
     max-width: 100%;
-    /* background-size: 40px; */
-    height: 25rem;
+    height: 23rem;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-blend-mode: overlay; */
-    /* background-color: red; */
-    /* max-height: 40%; */
 }
 
 #grad1{
-    height: 200px;
+    height: 50rem;
     background-color: #cccccc;
     background-image: linear-gradient(red, yellow);
 }
 
 #logo{
-    padding-top: 3%;
     padding-left: 30%;
     padding-right: 1%;
 }
 
 .title{
-    /* padding-top: 2.5%; */
     padding-left: 30%;
     color: white;
 }
@@ -34,8 +28,6 @@
 }
 
 h1{
-    /* display: inline; */
-    /* padding-top: 5%; */
     color: white;
 }
 
@@ -45,4 +37,17 @@ h1{
     font-weight: bold;
     background-color: rgb(96, 59, 228);
 }
+
+.page-links{
+    padding-top: 2%;
+    font-size: 15pt;
+    text-align: right;
+    padding-right: 2%;
+}
+
+a{
+    color: white;
+    padding-right: 2%;
+}
+
 
