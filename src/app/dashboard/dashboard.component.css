@@ -18,20 +18,9 @@
     color: white;
 }
 
-/* #listItems{
-    margin: 0 auto;
-} */
-
 h1{
     color: white;
 }
-
-/* #navigationBar{
-    max-width: 100%; 
-    font-size: 15px; 
-    font-weight: bold;
-    background-color: rgb(96, 59, 228);
-} */
 
 .page-links{
     padding-top: 2%;
@@ -52,13 +41,19 @@ a{
 } */
 
 .picture{
-    padding-top: 6%;
-    margin-left: 55%;
+    padding-top: 12%;
+    margin-left: 30%;
 }
 
-.column{
+.column1{
     float: left;
-    width: 50%;
+    width: 35%;
+    padding: 5px;  
+}
+
+.column2{
+    float: left;
+    width: 65%;
     padding: 5px;  
 }
 
@@ -73,15 +68,20 @@ a{
 }
 
 #grad1{
-    height: 40rem;
+    height: 36rem;
     /* display: inline-block; */
     /* flex-wrap: wrap; */
     /* background-color: #cccccc; */
     background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
-    text-align: center;
+    text-align: left;
 }
 
 #background-info{
-    padding-top: 6%;
-    margin-right: 75%;
+    padding-top: 5.5%;
+    margin-right: 10%;
+}
+
+#specializations{
+    color: black;
+    padding-right: 0;
 }
