@@ -34,12 +34,6 @@ a{
     padding-right: 2%;
 }
 
-/* .container{
-    border: 3px firebrick solid;
-    margin-left: 8%;
-    margin-right: 8%;
-} */
-
 .picture{
     padding-top: 12%;
     margin-left: 30%;
@@ -69,9 +63,6 @@ a{
 
 #grad1{
     height: 36rem;
-    /* display: inline-block; */
-    /* flex-wrap: wrap; */
-    /* background-color: #cccccc; */
     background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
     text-align: left;
 }

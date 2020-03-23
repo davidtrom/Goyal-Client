@@ -11,7 +11,7 @@ import { LocationComponent } from './location/location.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent},
   { path: 'about', component: BioComponent},
-  { path: 'specialities', component: SpecialtiesComponent},
+  { path: 'specialties', component: SpecialtiesComponent},
   { path: 'insurance', component: InsuranceComponent},
   { path: 'process', component: ProcessComponent},
   { path: 'contact', component: ContactComponent},
