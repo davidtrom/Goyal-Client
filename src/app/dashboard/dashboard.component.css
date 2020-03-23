@@ -14,7 +14,7 @@
 }
 
 .title{
-    padding-left: 30%;
+    /* padding-left: 30%; */
     color: white;
 }
 
@@ -25,8 +25,9 @@ h1{
 .page-links{
     padding-top: 2%;
     font-size: 15pt;
-    text-align: right;
+    /* text-align: right; */
     padding-right: 2%;
+    margin-left: 
 }
 
 a{
