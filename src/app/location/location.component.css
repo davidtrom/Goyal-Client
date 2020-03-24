@@ -41,11 +41,11 @@ a{
     padding-right: 4%;
 }
 
-.column{
+/* .column{
     float: left;
     width: 50%;
     padding: 5px;  
-}
+} */
 
 .col-md-6{
     display: grid;
@@ -54,7 +54,7 @@ a{
     /* padding: 5px;   */
 }
 
-.row::after{
+/* .row::after{
     content:"";
     clear: both;
     display: table;
@@ -62,16 +62,17 @@ a{
 
 .clear{
     clear: both;
-}
+} */
 
 #grad1{
-    height: 36rem;
+    width: auto;
+    max-width: 100%;
+    max-height: fit-content;
     background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
-    text-align: left;
+    
 }
 
 .map{
-    
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
