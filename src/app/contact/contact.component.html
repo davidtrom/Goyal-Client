@@ -1,23 +1,26 @@
 
-<div class="flex-conatiner">
+<div class="flex-container">
 
     <div id="design-block">
-        <div class="page-links">
-            <a [routerLink]="['']">Home</a>
-            <a [routerLink]="['/specialties']">Specializations</a>
-            <a [routerLink]="['/process']">Process</a>
-            <a [routerLink]="['/insurance']">Insurance</a>
-            <a [routerLink]="['/location']">Location</a>
-            <a [routerLink]="['/contact']">Contact</a>
-        </div>
-            
-        <img src="../../assets/logo.PNG" id="logo">
+        <nav class="nav justify-content-end">
+            <li class="nav-item nav-link"><a [routerLink]="['']">Home</a></li>
+            <li class="nav-item nav-link"><a [routerLink]="['/specialties']">Specializations</a></li>
+            <li class="nav-item nav-link"><a [routerLink]="['/process']">Process</a></li>
+            <li class="nav-item nav-link"><a [routerLink]="['/insurance']">Insurance</a></li>
+            <li class="nav-item nav-link"><a [routerLink]="['/location']">Location</a></li>
+            <li class="nav-item nav-link"><a [routerLink]="['/contact']">Contact</a></li>
+        </nav>
+        
+        <img src="../../assets/logo.PNG"  id="logo">
         
         <div class = "title">
             <h1>Manju R. Goyal, M.D.</h1>
             Board Certified Psychiatrist, Fellow of APA
         </div>
     </div>
+</div>
+
+
     <!-- <nav class="navbar navbar-expand-lg navbar-light" id="navigationBar">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,7 +37,8 @@
         </div>
       </nav> -->
 
-    <div id=grad1>
+<div class="flex-container">
+      <div id=grad1>
         <div class="container">
             <form>
                 <div class="form-row">
@@ -83,6 +87,7 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
               </form>
         </div>
+    </div>
         
         <!-- <div class="form-group col-md-6">
             <label for="email">Email:</label>
