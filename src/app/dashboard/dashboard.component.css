@@ -40,7 +40,7 @@ a{
 }
 
 .picture{
-    max-width: width 100%;
+    max-width: 100%;
     height: auto;
     padding-top: 12%;
     margin-left: 30%;
@@ -71,7 +71,7 @@ a{
 #grad1{
     height: 77vh;
     background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
-    text-align: left;
+    /* text-align: left; */
 }
 
 #background-info{
@@ -84,15 +84,19 @@ a{
     padding-right: 0;
 }
 
-@media screen and (max-width: 650px) {
+@media only screen and (max-width: 629px) {
+    /* for widths less than or equal to 629 pixels */
     .column1 {
-      width: 100%;
+      float: none ;
+      width: 100% ;
+      text-align: center;
+      /* margin-left: 0; */
+      /* padding-right: 20%; */
     }
-}
-
-@media screen and (max-width: 650px) {
     .column2 {
-      width: 100%;
+      float: none ;
+      width: 100% ;
+      text-align: center;
+      padding-left: 8%;
     }
-}
-
+  }
