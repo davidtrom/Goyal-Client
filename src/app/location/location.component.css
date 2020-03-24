@@ -1,0 +1,101 @@
+#design-block{
+    background: url(../../assets/dallasBackground.png);
+    background-position: center center;
+    max-width: 100%;
+    height: 56vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#logo{
+    max-width: 100%;
+    height: auto;
+    padding-left: 20%;
+    padding-top: 1.5%;
+
+}
+
+#title{
+    padding-left: 20%;
+    font-size: 1.2vw;
+    color: white;
+    margin-right: 0;
+}
+
+h1{
+    margin-left: 20%;
+    color: white;
+    font-size: 2.5vw;
+}
+
+.nav{
+    display: flex;
+    padding-top: 1%;
+    font-size: 1.4vw;
+    padding-right: 2%; 
+}
+
+a{
+    color: white;
+    padding-right: 4%;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 5px;  
+}
+
+.col-md-6{
+    display: grid;
+    float: left;
+    /* width: 50%; */
+    /* padding: 5px;   */
+}
+
+.row::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.clear{
+    clear: both;
+}
+
+#grad1{
+    height: 36rem;
+    background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
+    text-align: left;
+}
+
+.map{
+    
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map iframe{
+    padding-left: 8%;
+    padding-top: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+}
+
+#info{
+    padding-top: 8%;
+}
+
+#directions{
+    font-size: 22pt;
+    color: white;
+    padding-top: 5%;
+    padding-left: 8%;
+    text-align: center;
+}
