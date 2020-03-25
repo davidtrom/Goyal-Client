@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'process', component: ProcessComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'location', component: LocationComponent},
+  { path: 'dash', component: DashboardComponent},
   
   // if no route, redirect to home
   { path: '**', redirectTo: '' }
