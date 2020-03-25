@@ -1,0 +1,32 @@
+#design-block{
+    background: url(../../assets/meditation.jpg);
+    background-position: center center;
+    max-width: 200vw;
+    height: 54vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo{
+    max-width: 100%;
+    height: auto;
+    padding-left: 30%;
+}
+
+.title{
+    padding-left: 30%;
+    color: white;
+    font-size: 1.2vw;
+}
+
+h1{
+    font-size: 2.5vw;
+    color: white;
+}
+
+.nav{
+    display: flex;
+    padding-top: 1%;
+    font-size: 1.5vw;
+    padding-right: 2%; 
+}

@@ -7,9 +7,10 @@ import { InsuranceComponent } from './insurance/insurance.component';
 import { ProcessComponent } from './process/process.component';
 import { ContactComponent } from './contact/contact.component';
 import { LocationComponent } from './location/location.component';
+import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent},
+  { path: '', component: DashboardAltComponent},
   { path: 'about', component: BioComponent},
   { path: 'specialties', component: SpecialtiesComponent},
   { path: 'insurance', component: InsuranceComponent},

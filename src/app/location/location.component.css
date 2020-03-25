@@ -2,11 +2,10 @@
     background: url(../../assets/dallasBackground.png);
     background-position: center center;
     max-width: 100%;
-    height: 56vh;
+    height: 54vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 #logo{
     width: auto;

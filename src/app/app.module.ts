@@ -12,6 +12,7 @@ import { InsuranceComponent } from './insurance/insurance.component';
 import { ProcessComponent } from './process/process.component';
 import { SpecialtiesComponent } from './specialties/specialties.component';
 import { LocationComponent } from './location/location.component';
+import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LocationComponent } from './location/location.component';
     InsuranceComponent,
     ProcessComponent,
     SpecialtiesComponent,
-    LocationComponent
+    LocationComponent,
+    DashboardAltComponent
   ],
   imports: [
     BrowserModule,
