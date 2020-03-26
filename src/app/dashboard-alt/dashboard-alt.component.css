@@ -8,7 +8,7 @@
     width: auto;
     max-width: 100%;
     max-height: fit-content;
-    background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
+    /* background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174)); */
 }
 
 #background-info{

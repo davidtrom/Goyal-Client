@@ -13,7 +13,7 @@
 }
 
 #design-block { 
-    background-image: linear-gradient( rgb(65, 221, 174),rgb(252, 255, 92));
+    background-image: linear-gradient(rgb(75, 167, 209),rgb(51, 72, 163));
     max-width: 100%;
     height: 4vh;
     /* background-color: rgb(252, 255, 92); */
@@ -46,5 +46,5 @@ h3 {
 }
 
 hr{
-    background-color: rgb(252, 255, 92);
+    background-color: rgb(75, 167, 209);
 }

@@ -1,13 +1,14 @@
 #container{
     width: auto;
     max-width: 100%;
-    height: auto;
-    max-height: fit-content;
+    height: 150vh;
+    /* max-height: 30vh; */
+    /* max-height: fit-content; */
     /* background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174)); */
-    background-image: url("../../assets/serenity-1851950_1920.jpg");
-    /* background-blend-mode: screen;
-    background-position: center center; */
-    
+    background-image: url("../../assets/hyacinth2.jpg");
+    /* background-blend-mode: screen;*/
+    background-position: center center;
+    opacity: 0.8;
 }
 
 .specializations{
@@ -23,9 +24,6 @@ h2{
 #text{
     padding-left: 7%;
     padding-right: 7%;
-    color: white;
-}
-
-.specializations{
-    color: white;
+    color: black;
+    margin-top: -20%;
 }
