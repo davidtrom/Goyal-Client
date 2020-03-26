@@ -3,11 +3,10 @@
     background: url(../../assets/meditation.jpg);
     background-position: center center;
     max-width: 200vw;
-    height: 56vh; 
+    height: 54vh; 
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 #logo{
     max-width: 100%;
@@ -28,10 +27,14 @@ h1{
 
 .nav{
     display: flex;
-    padding-top: 2%;
+    padding-top: 1%;
     font-size: 1.5vw;
-    /* text-align: right; */
     padding-right: 2%; 
+}
+
+.col-md-4{
+    text-align: center;
+    padding-top: 5%;
 }
 
 a{
@@ -39,14 +42,17 @@ a{
     padding-right: 2%;
 }
 
-.picture{
-    max-width: width 100%;
+/* #picture{
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    max-width: fit-content;
     height: auto;
-    padding-top: 12%;
-    margin-left: 30%;
-}
+    padding-top: 15%; */
+    /* padding-left: 15%; */
+/* } */
 
-.column1{
+/* .column1{
     float: left;
     width: 35%;
     padding: 5px;  
@@ -66,17 +72,20 @@ a{
 
 .clear{
     clear: both;
-}
+} */
 
 #grad1{
-    height: 77vh;
+    width: auto;
+    max-width: 100%;
+    max-height: fit-content;
     background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174));
-    text-align: left;
 }
 
 #background-info{
     padding-top: 5.5%;
-    margin-right: 10%;
+    padding-right: 10%;
+    padding-bottom: 7%;
+    padding-left: 3%
 }
 
 #specializations{
@@ -84,15 +93,25 @@ a{
     padding-right: 0;
 }
 
-@media screen and (max-width: 650px) {
+/* @media only screen and (max-width: 600px) { */
+    /* for widths less than or equal to 629 pixels */
+    /* #grad1{
+        display:flex;
+        align-items: stretch;
+        flex-flow: column wrap;
+    }
     .column1 {
-      width: 100%;
+        order: 1;
+      float: none ;
+      width: 100% ;
+      text-align: left;
+    
     }
-}
-
-@media screen and (max-width: 650px) {
     .column2 {
-      width: 100%;
+        order: 2;
+      float: none ;
+      width: 100% ;
+      text-align: center;
+      padding-left: 8%;
     }
-}
-
+  } */
