@@ -1,0 +1,46 @@
+h2{
+    text-align: center;
+    color: rgb(51, 72, 163);
+    padding-top: 3%;
+}
+
+#subtitle{
+    text-align: center;
+    color: rgb(51, 72, 163);
+    font-size: 16pt;
+    padding-bottom: 2%;
+}
+
+.title{
+    display: inline;
+    color: black;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.numbers{
+    font-size: 20pt;
+    color: rgb(51, 72, 163);
+    display: inline;
+    font-weight: bold;
+}
+
+.col3{
+    padding-right: 4%;
+}
+
+.col1{
+    padding-left: 4%;
+}
+
+#unique{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#portal{
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+    padding-top: 3%;
+}

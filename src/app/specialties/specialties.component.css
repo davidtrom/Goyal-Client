@@ -1,18 +1,20 @@
-#container{
+.container{
     width: auto;
     max-width: 100%;
-    height: 150vh;
+    height: 137vh;
+    max-height: fit-content;
     /* max-height: 30vh; */
     /* max-height: fit-content; */
     /* background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174)); */
     background-image: url("../../assets/hyacinth2.jpg");
-    /* background-blend-mode: screen;*/
     background-position: center center;
-    opacity: 0.8;
+    opacity: 0.35;
+    /* background-repeat: repeat; */
 }
 
-.specializations{
-    padding-bottom: 7%;
+#specializations{
+    padding-bottom: 5%;
+    margin-left: 38%;
 }
 
 h2{
@@ -21,9 +23,12 @@ h2{
     padding-bottom: 2%;
 }
 
-#text{
+div.text{
+    font-size: 13pt;
+    position: relative;
     padding-left: 7%;
     padding-right: 7%;
     color: black;
-    margin-top: -20%;
+    margin-top: -67%;
+    font-weight: bold;
 }
