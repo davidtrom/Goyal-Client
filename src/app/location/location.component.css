@@ -58,7 +58,7 @@ a{
 
 .map iframe{
     padding-left: 8%;
-    padding-top: 2%;
+    padding-top: 1%;
     position: absolute;
     top: 0;
     left: 0;
@@ -93,7 +93,6 @@ a{
 #directions{
     font-size: 22pt;
     color: white;
-    padding-top: 4%;
     padding-left: 8%;
     text-align: center;
 }
