@@ -36,6 +36,8 @@ h2{
 #unique{
     padding-left: 4%;
     padding-right: 4%;
+    font-size: 13pt;
+    padding-bottom: 1.2%;
 }
 
 #portal{
@@ -43,4 +45,12 @@ h2{
     padding-right: 4%;
     padding-bottom: 4%;
     padding-top: 3%;
+}
+
+.phase{
+    font-size: 13pt;
+}
+
+.portal{
+    font-size: 13pt;
 }

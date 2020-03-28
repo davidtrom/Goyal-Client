@@ -1,46 +1,3 @@
-/* #design-block{
-    background: url(../../assets/dallasBackground.png);
-    background-position: center center;
-    max-width: 100%;
-    height: 54vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#logo{
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    padding-left: 20%;
-    padding-top: 1.5%;
-
-}
-
-#title{
-    padding-left: 20%;
-    font-size: 1.2vw;
-    color: white;
-    margin-right: 0;
-}
-
-h1{
-    margin-left: 20%;
-    color: white;
-    font-size: 2.5vw;
-}
-
-.nav{
-    display: flex;
-    padding-top: 1%;
-    font-size: 1.4vw;
-    padding-right: 2%;
-    text-align: left; 
-}
-
-a{
-    color: white;
-    padding-right: 4%;
-} */
 
 #grad1{
     width: auto;
@@ -64,6 +21,7 @@ a{
     left: 0;
     width: 95%;
     height: 95%;
+    padding-bottom: 3%;
 }
 
 .building{

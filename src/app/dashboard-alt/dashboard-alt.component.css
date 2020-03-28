@@ -15,10 +15,15 @@
     padding-top: 5.5%;
     padding-right: 10%;
     padding-bottom: 7%;
-    padding-left: 3%
+    padding-left: 3%;
+    font-size: 13pt;
 }
 
 #specializations{
     color: black;
     padding-right: 0;
+}
+
+#picture{
+    padding-top: 5%;
 }
