@@ -13,6 +13,7 @@ import { ProcessComponent } from './process/process.component';
 import { SpecialtiesComponent } from './specialties/specialties.component';
 import { LocationComponent } from './location/location.component';
 import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

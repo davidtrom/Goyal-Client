@@ -8,10 +8,10 @@ import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  createContactForm: FormGroup;
+  contactForm: FormGroup;
 
   constructor() {
-    this.createContactForm = this.createFormGroup();
+    this.contactForm = this.createFormGroup();
    }
 
   ngOnInit() {
