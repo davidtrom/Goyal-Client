@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { BioComponent } from './bio/bio.component';
 import { SpecialtiesComponent } from './specialties/specialties.component';
 import { InsuranceComponent } from './insurance/insurance.component';
@@ -17,7 +16,7 @@ const routes: Routes = [
   { path: 'process', component: ProcessComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'location', component: LocationComponent},
-  { path: 'dash', component: DashboardComponent},
+  
   
   // if no route, redirect to home
   { path: '**', redirectTo: '' }

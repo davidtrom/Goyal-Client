@@ -12,24 +12,31 @@ export class ContactComponent implements OnInit {
   
 
   constructor(private fb: FormBuilder) {
-    this.contactForm = this.createFormGroup();
    }
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      volEmail: [''],
-      volPassword: ['']
+      firstName: [''],
+      lastName: [''],
+      email: [''],
+      phoneNum: [''],
+      birthDate: [''],
+      reasonForContact: [''],
+      preferredApptTime: [''],
+      message: [''],
     });
   }
 
-  createFormGroup(){
-    return new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
-      inputAddress: new FormControl(''),
-      inputAddress2: new FormControl(''),
-      inputCity: new FormControl('')
-    });
-  }
+  get form() { return this.contactForm.controls; }
+
+  // createFormGroup(){
+  //   return new FormGroup({
+  //     email: new FormControl(''),
+  //     password: new FormControl(''),
+  //     inputAddress: new FormControl(''),
+  //     inputAddress2: new FormControl(''),
+  //     inputCity: new FormControl('')
+  //   });
+  // }
 
 }
