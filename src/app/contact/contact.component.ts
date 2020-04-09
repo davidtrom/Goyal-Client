@@ -9,12 +9,17 @@ import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
+  
 
-  constructor() {
+  constructor(private fb: FormBuilder) {
     this.contactForm = this.createFormGroup();
    }
 
   ngOnInit() {
+    this.contactForm = this.fb.group({
+      volEmail: [''],
+      volPassword: ['']
+    });
   }
 
   createFormGroup(){
