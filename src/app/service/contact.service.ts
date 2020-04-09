@@ -18,11 +18,14 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
-  createContact(contact:Contact): Observable<Boolean> {
-    return this.http.post<Boolean>(this.baseUrl+"/send-email", contact, this.httpOptions)
-      .pipe(tap(data => {console.log("sending email", data);}), 
-      catchError(this.handleError<Boolean>('send email', null))
-    )
+  createContact(contactToCreate:Contact): Observable<Contact> {
+    console.log(this.baseUrl);
+    console.log("ContactToCreate: ", contactToCreate);
+    
+    return this.http.post<Contact>(this.baseUrl+"/send-email", contactToCreate, this.httpOptions)
+      .pipe(tap(data => {console.log("sending email", data), 
+      catchError(this.handleError<Contact>('send email', null))
+  }));
   }
 
   /**

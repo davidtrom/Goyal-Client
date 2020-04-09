@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder} from '@angular/forms';
 import { Contact } from '../models/contact.model';
 import { ContactService } from '../service/contact.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,10 +12,8 @@ import { ContactService } from '../service/contact.service';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
-  contact: Contact;
-  
 
-  constructor(private fb: FormBuilder, private contactService: ContactService) {
+  constructor(private fb: FormBuilder, private contactService: ContactService, private router: Router) {
    }
 
   ngOnInit() {
@@ -36,7 +35,7 @@ export class ContactComponent implements OnInit {
     console.log("inside onSubmit")
         
     let contact: Contact = new Contact(
-     
+      null,
       this.contactForm.controls.firstName.value,
       this.contactForm.controls.lastName.value,
       this.contactForm.controls.email.value,
@@ -47,20 +46,32 @@ export class ContactComponent implements OnInit {
       this.contactForm.controls.message.value
       );
 
+      console.log("checking data in TS: ", contact)
+
       this.contactService.createContact(contact).subscribe(
         data => {console.log("in component", data);
         console.log(this.contactForm.value);
         this.contactForm.reset();
-        if(data){
-          alert('Your email has been sent');
+        alert('Your email is sent');
         }
-        else {
-          alert('There was an error, your email has NOT been sent ' + '\n'
-          + 'Please try again.');
-        }}
-        
       );
-  } 
+
+      // this.contactService.createContact(contact).subscribe(
+      //   data => {console.log("in component", data);
+      //   console.log("Contact Form Values: ", this.contactForm.value);
+        
+      //   if(data){
+      //     alert('Your email has been sent');
+      //   }
+      //   else {
+      //     alert('There was an error, your email has NOT been sent ' + '\n'
+      //     + 'Please try again.');
+      //   }
+      //   this.contactForm.reset();
+       }
+        
+  //     );
+  // } 
 }
 
   // createFormGroup(){
