@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { FormGroup, FormBuilder} from '@angular/forms';
+import { Contact } from '../models/contact.model';
+import { ContactService } from '../service/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +11,10 @@ import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
+  contact: Contact;
   
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private contactService: ContactService) {
    }
 
   ngOnInit() {
@@ -29,6 +32,37 @@ export class ContactComponent implements OnInit {
 
   get form() { return this.contactForm.controls; }
 
+  onSubmit(): void{       
+    console.log("inside onSubmit")
+        
+    let contact: Contact = new Contact(
+     
+      this.contactForm.controls.firstName.value,
+      this.contactForm.controls.lastName.value,
+      this.contactForm.controls.email.value,
+      this.contactForm.controls.phoneNum.value,
+      this.contactForm.controls.birthDate.value,
+      this.contactForm.controls.reasonForContact.value,
+      this.contactForm.controls.preferredApptTime.value,
+      this.contactForm.controls.message.value
+      );
+
+      this.contactService.createContact(contact).subscribe(
+        data => {console.log("in component", data);
+        console.log(this.contactForm.value);
+        this.contactForm.reset();
+        if(data){
+          alert('Your email has been sent');
+        }
+        else {
+          alert('There was an error, your email has NOT been sent ' + '\n'
+          + 'Please try again.');
+        }}
+        
+      );
+  } 
+}
+
   // createFormGroup(){
   //   return new FormGroup({
   //     email: new FormControl(''),
@@ -38,5 +72,3 @@ export class ContactComponent implements OnInit {
   //     inputCity: new FormControl('')
   //   });
   // }
-
-}

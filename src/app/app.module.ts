@@ -14,6 +14,7 @@ import { SpecialtiesComponent } from './specialties/specialties.component';
 import { LocationComponent } from './location/location.component';
 import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule 
   ],

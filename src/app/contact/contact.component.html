@@ -1,59 +1,59 @@
-<h1>Get in Touch</h1>
-
-<div class="flex-container">
+        
+    <div class="flex-container">
+        <div class="heading">
+            <h1>Get in Touch:</h1>
+        </div>
         <div class="container">
-            <form [formGroup]="contactForm" (ngSubmit="onSubmit()")>
             
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" class="form-control" formControlName="firstName" placeholder="First Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name">
-                  </div>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="panel panel-default">
+                    
+                    <div class="body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First Name:</label>
+                                <input id="firstName" formControlName="firstName" type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last Name:</label>
+                                <input id="lastName" formControlName="lastName" type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email Address:</label>
+                                <input type="email" formControlName="email" class="form-control" id="email" placeholder="yourAddress@email.com">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phoneNum">Phone Number:</label>
+                                <input type="text" formControlName="phoneNum" class="form-control" id="phoneNum" placeholder="302-555-7890">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="birthDate">Birthday:</label>
+                                <input type="date" formControlName="birthDate" class="form-control" id="birthDate">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="reasonForContact">Reason for Contact:</label>
+                                <input type="text" formControlName="reasonForContact" class="form-control" id="reasonForContact" placeholder="Reason for Contact">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="preferredApptTime">Preferred Appointment Time:</label>
+                                <input type="text" formControlName="preferredApptTime" class="form-control" id="preferredApptTime" placeholder="Preferred Appointment Time">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="message">Message:</label>
+                                <input type="text" formControlName="message" class="form-control" id="message" placeholder="Message">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="btnSubmit">                 
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail">Email Address:</label>
-                        <input type="email" class="form-control" formControlName="email" placeholder="someone@email.com">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputPhone">Phone Number:</label>
-                        <input type="text" class="form-control" formControlName="phoneNum" placeholder="123-456-7890">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputDate">Date of Birth:</label>
-                        <input type="date" class="form-control" id="inputDate">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputReason">Reason for Contact:</label>
-                        <input type="text" class="form-control" formControlName="reason" placeholder="Reason for Contact">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputAppt">Preferred Appointment Time:</label>
-                        <input type="text" class="form-control" formControlName="apptTime" placeholder="Preferred Appointment Time">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputMessage">Additional Information:</label>
-                        <textarea type="text" class="form-control" formControlName="message" placeholder="Message"></textarea>
-                    </div>
-                </div>
-            
-                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-        
+        </div>
     </div>
-        
-        <!-- <div class="form-group col-md-6">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Email Address">
-          </div>
-        </div> -->
-    <!-- </div>
-</div> -->

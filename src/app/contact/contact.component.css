@@ -1,13 +1,16 @@
 .flex-container {
-    padding: 3rem 0rem;
-    border: 4px red solid;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* border: 4px red solid; */
   }
 
-.form-group {
-    position: relative;
-}
-
-h1{
+  #btnSubmit{
     text-align: center;
-    margin-top: 0;
-}
+  }
+
+  h1{
+      text-align: center;
+      padding-bottom: 1%;
+      color:rgb(51, 72, 163)
+  }
+
