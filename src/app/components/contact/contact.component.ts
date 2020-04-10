@@ -46,40 +46,28 @@ export class ContactComponent implements OnInit {
       this.contactForm.controls.message.value
       );
 
-      console.log("checking data in TS: ", contact)
-
-      this.contactService.createContact(contact).subscribe(
-        data => {console.log("in component", data);
-        console.log(this.contactForm.value);
-        this.contactForm.reset();
-        alert('Your email is sent');
-        }
-      );
+      
 
       // this.contactService.createContact(contact).subscribe(
       //   data => {console.log("in component", data);
-      //   console.log("Contact Form Values: ", this.contactForm.value);
-        
-      //   if(data){
-      //     alert('Your email has been sent');
-      //   }
-      //   else {
-      //     alert('There was an error, your email has NOT been sent ' + '\n'
-      //     + 'Please try again.');
-      //   }
+      //   console.log(this.contactForm.value);
       //   this.contactForm.reset();
+      //   alert('Your email is sent');
+      //   }
+      // );
+
+      this.contactService.createContact(contact).subscribe(
+        data => {console.log("was email sent? ", data);     
+        if(data){
+          alert('Your email has been sent');
+        }
+        else {
+          alert('There was an error, your email has NOT been sent ' + '\n'
+          + 'Please try again.');
+        }
+        this.contactForm.reset();
        }
         
-  //     );
-  // } 
+      );
+  } 
 }
-
-  // createFormGroup(){
-  //   return new FormGroup({
-  //     email: new FormControl(''),
-  //     password: new FormControl(''),
-  //     inputAddress: new FormControl(''),
-  //     inputAddress2: new FormControl(''),
-  //     inputCity: new FormControl('')
-  //   });
-  // }
