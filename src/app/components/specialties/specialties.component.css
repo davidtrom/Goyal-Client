@@ -3,13 +3,9 @@
     max-width: 100%;
     height: 137vh;
     max-height: fit-content;
-    /* max-height: 30vh; */
-    /* max-height: fit-content; */
-    /* background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174)); */
     background-image: url(../../../assets/hyacinth2.jpg);
     background-position: center center;
     opacity: 0.35;
-    /* background-repeat: repeat; */
 }
 
 #specializations{
@@ -24,7 +20,7 @@ h2{
     padding-bottom: 2%;
 }
 
-div.text{
+div.textDesktop{
     font-size: 13pt;
     position: relative;
     padding-left: 7%;
@@ -32,5 +28,15 @@ div.text{
     color: black;
     margin-top: -67%;
     font-weight: bold;
+}
+
+div.text{
+    font-size: 13pt;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+#mobileTitle, #spec-textMobile{
+    color: rgb(51, 72, 163);
 }
 

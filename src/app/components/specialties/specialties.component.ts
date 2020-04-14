@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./specialties.component.css']
 })
 export class SpecialtiesComponent implements OnInit {
+  private isMobileResolution: boolean;
 
-  constructor() { }
+  constructor() {
+   
+   }
 
   ngOnInit() {
+    if (window.innerWidth < 768) {
+      this.isMobileResolution = true;
+    } else {
+      this.isMobileResolution = false;
+    }
   }
 
 }
