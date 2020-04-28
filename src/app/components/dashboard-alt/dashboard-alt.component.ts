@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-alt.component.css']
 })
 export class DashboardAltComponent implements OnInit {
+  showDesignBlock: boolean = true;
 
   constructor() { }
 

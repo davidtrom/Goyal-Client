@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bio.component.css']
 })
 export class BioComponent implements OnInit {
+  showDesignBlock: boolean;
 
   constructor() { }
 

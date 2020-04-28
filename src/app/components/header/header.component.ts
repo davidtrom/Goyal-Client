@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  private showDesignBlock$: BehaviorSubject<boolean>;
+  
+  constructor() {
+    this.showDesignBlock$ = new BehaviorSubject<boolean>(false);
+   }
 
   ngOnInit() {
+    
   }
 
 }

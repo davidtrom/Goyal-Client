@@ -27,3 +27,9 @@
 #picture{
     padding-top: 5%;
 }
+
+#design-block {
+    background-image: linear-gradient(rgb(51, 72, 163),white);
+    max-width: 100%;
+    height: 4vh;
+}
