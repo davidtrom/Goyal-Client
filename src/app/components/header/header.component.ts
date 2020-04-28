@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { DesignBlockService } from 'src/app/service/design-block.service';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,14 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  private showDesignBlock$: BehaviorSubject<boolean>;
+  showDesignBlock$: boolean;
   
-  constructor() {
-    this.showDesignBlock$ = new BehaviorSubject<boolean>(false);
+  constructor(private designService: DesignBlockService) {
+    
    }
 
   ngOnInit() {
-    
+    this.designService.getDesignBlockStatus().subscribe(data => this.showDesignBlock$ = data);
   }
 
 }

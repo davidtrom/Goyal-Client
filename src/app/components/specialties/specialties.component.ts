@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesignBlockService } from 'src/app/service/design-block.service';
 
 @Component({
   selector: 'app-specialties',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SpecialtiesComponent implements OnInit {
   private isMobileResolution: boolean;
 
-  constructor() {
+  constructor(private designService: DesignBlockService) {
    
    }
 
@@ -18,6 +19,8 @@ export class SpecialtiesComponent implements OnInit {
     } else {
       this.isMobileResolution = false;
     }
+
+    this.designService.updateDesignBlockStatus(false);
   }
 
 }

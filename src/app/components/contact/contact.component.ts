@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder} from '@angular/forms';
 import { Contact } from '../../models/contact.model';
 import { ContactService } from '../../service/contact.service';
-import { Router } from '@angular/router';
+import { DesignBlockService } from 'src/app/service/design-block.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,10 +13,13 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private contactService: ContactService, private router: Router) {
+  constructor(private fb: FormBuilder, private contactService: ContactService, private designService: DesignBlockService) {
    }
 
   ngOnInit() {
+
+    this.designService.updateDesignBlockStatus(true);
+
     this.contactForm = this.fb.group({
       firstName: [''],
       lastName: [''],

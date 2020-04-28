@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BioComponent } from './components/bio/bio.component';
 import { SpecialtiesComponent } from './components/specialties/specialties.component';
 import { InsuranceComponent } from './components/insurance/insurance.component';
 import { ProcessComponent } from './components/process/process.component';
@@ -10,7 +9,6 @@ import { DashboardAltComponent } from './components/dashboard-alt/dashboard-alt.
 
 const routes: Routes = [
   { path: '', component: DashboardAltComponent},
-  { path: 'about', component: BioComponent},
   { path: 'specialties', component: SpecialtiesComponent},
   { path: 'insurance', component: InsuranceComponent},
   { path: 'process', component: ProcessComponent},

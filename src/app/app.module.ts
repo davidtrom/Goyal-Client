@@ -6,7 +6,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { BioComponent } from './components/bio/bio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { InsuranceComponent } from './components/insurance/insurance.component';
 import { ProcessComponent } from './components/process/process.component';
@@ -22,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    BioComponent,
     ContactComponent,
     InsuranceComponent,
     ProcessComponent,
