@@ -2,17 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BioComponent } from './bio/bio.component';
-import { ContactComponent } from './contact/contact.component';
-import { InsuranceComponent } from './insurance/insurance.component';
-import { ProcessComponent } from './process/process.component';
-import { SpecialtiesComponent } from './specialties/specialties.component';
-import { LocationComponent } from './location/location.component';
-import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { InsuranceComponent } from './components/insurance/insurance.component';
+import { ProcessComponent } from './components/process/process.component';
+import { SpecialtiesComponent } from './components/specialties/specialties.component';
+import { LocationComponent } from './components/location/location.component';
+import { DashboardAltComponent } from './components/dashboard-alt/dashboard-alt.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,6 @@ import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    BioComponent,
     ContactComponent,
     InsuranceComponent,
     ProcessComponent,
@@ -30,7 +30,9 @@ import { DashboardAltComponent } from './dashboard-alt/dashboard-alt.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
