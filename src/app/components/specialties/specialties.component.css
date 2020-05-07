@@ -6,6 +6,7 @@
     background-image: url(../../../assets/hyacinth2.jpg);
     background-position: center center;
     opacity: 0.35;
+    background-repeat: no-repeat;
 }
 
 #specializations{

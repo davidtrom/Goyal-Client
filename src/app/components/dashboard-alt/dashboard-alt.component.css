@@ -25,7 +25,8 @@
 }
 
 #picture{
-    padding-top: 5%;
+    vertical-align: middle;
+    /* padding-top: 5%; */
 }
 
 #design-block {
