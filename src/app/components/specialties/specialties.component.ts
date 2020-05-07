@@ -7,7 +7,7 @@ import { DesignBlockService } from 'src/app/service/design-block.service';
   styleUrls: ['./specialties.component.css']
 })
 export class SpecialtiesComponent implements OnInit {
-  private isMobileResolution: boolean;
+  isMobileResolution: boolean;
 
   constructor(private designService: DesignBlockService) {
    
