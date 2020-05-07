@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Serve static files....
-app.use(express.static(__dirname + '/dist/goyal-client'));
+app.use(express.static(__dirname + '/dist/Goyal-Client'));
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/goyal-client/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/Goyal-Client/index.html'));
 });
 
 // default Heroku PORT
