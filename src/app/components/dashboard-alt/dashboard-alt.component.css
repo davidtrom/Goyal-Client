@@ -1,32 +1,21 @@
 
 .col-md-4{
     text-align: center;
-    padding-top: 5%;
-}
-  
-#grad1{
-    width: auto;
-    max-width: 100%;
-    max-height: fit-content;
-    /* background-image: linear-gradient(rgb(75, 167, 209),rgb(65, 221, 174)); */
+    padding-top: 3%;
+    padding-left: 4%;
 }
 
 #background-info{
     padding-top: 5.5%;
     padding-right: 10%;
     padding-bottom: 7%;
-    padding-left: 3%;
+    padding-left: 6%;
     font-size: 13pt;
 }
 
 #specializations{
     color: black;
     padding-right: 0;
-}
-
-#picture{
-    vertical-align: middle;
-    /* padding-top: 5%; */
 }
 
 #design-block {

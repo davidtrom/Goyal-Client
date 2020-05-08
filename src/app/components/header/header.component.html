@@ -7,16 +7,17 @@
                 
             
             <div id="title">Dr. Manju R. Goyal, M.D.
-                <br>
-                Board Certified Psychiatrist, Fellow of APA
-                </div>
+                    <p id="title-description">
+                        Board Certified Psychiatrist, Fellow of APA
+                    </p>
+            </div>
 
-            <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+            <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="collapsed"
                 aria-label="Toggle navigation" (click)="collapsed = !collapsed">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+            <div class="navbar-collapse" [class.collapse]="!collapsed" id="navbarContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" ngbDropdown>
                         <a class="nav-link" a [routerLink]="['/']" routerLinkActive="router-link-active" style="color:white" role="button">

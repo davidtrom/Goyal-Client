@@ -4,9 +4,9 @@
     height: 137vh;
     max-height: fit-content;
     background-image: url(../../../assets/hyacinth2.jpg);
-    background-position: center center;
+    /* background-position: center center; */
     opacity: 0.35;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
 }
 
 #specializations{
