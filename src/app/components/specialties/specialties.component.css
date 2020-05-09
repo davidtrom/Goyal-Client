@@ -10,22 +10,38 @@
 }
 
 #specializations{
-    padding-bottom: 5%;
-    margin-left: 38%;
+    padding-bottom: 1%;
     font-size: 13pt;
+    text-align: center;
+}
+
+#adults-only{
+    font-size: 15pt;
+    font-style: italic;
+}
+
+.spec-text, .spec-textMobile{
+    padding-top: 2%;
+    text-align: center;
+    padding-bottom: 0;
 }
 
 h2{
-    padding-top: 3%;
     text-align: center;
     padding-bottom: 2%;
+}
+
+#list{
+    display: table;
+    margin: auto;
+    padding-bottom: 3%;
 }
 
 div.textDesktop{
     font-size: 13pt;
     position: relative;
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
     color: black;
     margin-top: -67%;
     font-weight: bold;
@@ -33,11 +49,11 @@ div.textDesktop{
 
 div.text{
     font-size: 13pt;
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-#mobileTitle, #spec-textMobile{
+#mobileTitle, .spec-textMobile{
     color: rgb(131, 97, 224);
 }
 

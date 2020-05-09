@@ -1,6 +1,6 @@
 h2{
     text-align: center;
-    color: rgb(51, 72, 163);
+    color: rgb(131, 97, 224);
     padding-top: 3%;
 }
 
@@ -25,14 +25,6 @@ h2{
     font-weight: bold;
 }
 
-.col3{
-    padding-right: 4%;
-}
-
-.col1{
-    padding-left: 4%;
-}
-
 #unique{
     padding-left: 4%;
     padding-right: 4%;
@@ -54,4 +46,9 @@ h2{
 
 .portal{
     font-size: 13pt;
+}
+
+.row{
+    padding-left: 4%;
+    padding-right: 4%;
 }
