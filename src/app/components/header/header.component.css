@@ -6,17 +6,20 @@
 }
 
 header{
-    background-color: #40504f;
+    /* background-color: #40504f; */
+    background-color: #b9c0c0;
 }
 
 #title{
-    color: white;
+    /* color: white; */
+    color: black;
     font-size: 18pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #title-description{
-    color: white;
+    /* color: white; */
+    color: black;
     font-size: 13.5pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -25,12 +28,8 @@ li{
     font-size: 15pt;
 }
 
-.navbar-collapse{
-    color: white;
-}
-
 #design-block {
-    background-image: linear-gradient(rgb(51, 72, 163),white);
+    background-image: linear-gradient(rgb(131, 97, 224), white);
     max-width: 100%;
     height: 4vh;
 }
