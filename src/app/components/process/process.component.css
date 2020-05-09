@@ -1,4 +1,4 @@
-h2{
+h1{
     text-align: center;
     color: rgb(131, 97, 224);
     padding-top: 3%;
@@ -6,7 +6,7 @@ h2{
 
 #subtitle{
     text-align: center;
-    color: rgb(51, 72, 163);
+    color: rgb(131, 97, 224);
     font-size: 16pt;
     padding-bottom: 2%;
 }

@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    color: rgb(51, 72, 163);
+    color: rgb(131, 97, 224);
     padding-top: 1%;
 }
 
@@ -8,6 +8,7 @@ ul{
     font-size: 13pt;
     padding-left: 15%;
     padding-bottom: 1.5%;
+    padding-right: 3%;
 }
 
 #topLabel{
@@ -15,21 +16,22 @@ ul{
     font-weight: bold;
     padding-left: 15%;
     padding-top: 2%;
-    color: rgb(51, 72, 163);
+    /* color: rgb(51, 72, 163); */
+    color: rgb(131, 97, 224);
 }
 
 #bottomLabel{
     font-size: 18pt;
     font-weight: bold;
     padding-left: 15%;
-    color: rgb(51, 72, 163);
+    color: rgb(131, 97, 224);
 }
 
 #label{
     font-size: 18pt;
     font-weight: bold;
     padding-left: 15%;
-    color: rgb(51, 72, 163);
+    color: rgb(131, 97, 224);
 }
 
 #medicare{

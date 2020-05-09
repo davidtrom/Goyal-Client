@@ -2,7 +2,6 @@
     padding-top: 2%;
     padding-bottom: 2%;
     font-size: 13pt;
-    /* border: 4px red solid; */
   }
 
   #btnSubmit{
@@ -12,6 +11,6 @@
   h1{
       text-align: center;
       padding-bottom: 1%;
-      color:rgb(51, 72, 163)
+      color:rgb(131, 97, 224);
   }
 
