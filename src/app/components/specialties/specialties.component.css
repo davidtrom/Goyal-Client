@@ -31,10 +31,14 @@ h2{
     padding-bottom: 2%;
 }
 
+#desktop-title{
+    padding-top: 2%;
+}
+
 #list{
     display: table;
     margin: auto;
-    padding-bottom: 3%;
+    padding-bottom: 3.7%;
 }
 
 div.textDesktop{
