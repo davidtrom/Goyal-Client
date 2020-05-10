@@ -1,8 +1,9 @@
 #logo{
     /* padding-left: 30%; */
-    max-width: 10vw;
+    /* max-width: 13vw; */
     height: auto;
     width: auto;
+    padding-top: 0;
 }
 
 header{
@@ -10,15 +11,18 @@ header{
     background-color: #b9c0c0;
 }
 
-#title{
+.title{
     /* color: white; */
+    
     color: black;
     font-size: 18pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
 }
 
 #title-description{
     /* color: white; */
+   
     color: black;
     font-size: 13.5pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -34,6 +38,6 @@ li{
     height: 4vh;
 }
 
-/* header{
-    background-color: rgb(196, 202, 202);
-} */
+span{
+    display: inline;
+}

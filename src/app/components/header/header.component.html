@@ -3,14 +3,17 @@
     <div class="flex-container">
         <nav class="navbar navbar-expand-md navbar-light">
             
-            <span class="navbar-brand"><img src="../../../assets/LtGrayTransparentLogoTreeColored.png" id="logo"></span>
-                
             
-            <div id="title">Dr. Manju R. Goyal, M.D.
+            <span class="navbar-brand"><img src="../../../assets/LtGrayTransparentLogoTreeColored2.PNG" id="logo"></span>
+                
+            <a [routerLink]="['/']" style="text-decoration: none;">
+                <div class="title">
+                    Dr. Manju R. Goyal, M.D. 
                     <p id="title-description">
                         Board Certified Psychiatrist, Fellow of APA
                     </p>
-            </div>
+                </div>
+            </a>
 
             <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="collapsed"
                 aria-label="Toggle navigation" (click)="collapsed = !collapsed">
