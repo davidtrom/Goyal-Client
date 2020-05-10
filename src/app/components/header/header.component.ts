@@ -9,7 +9,7 @@ import { DesignBlockService } from 'src/app/service/design-block.service';
 })
 export class HeaderComponent implements OnInit {
   showDesignBlock$: boolean;
-  collapsed: any;
+  collapsed: boolean;
   
   constructor(private designService: DesignBlockService) {
     
@@ -17,6 +17,16 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.designService.getDesignBlockStatus().subscribe(data => this.showDesignBlock$ = data);
+  }
+
+  collapse(): boolean{
+    if(this.collapsed === true){
+      this.collapsed = false;
+    }
+    else{
+      this.collapsed = true;
+    }
+    return this.collapsed;
   }
 
 }
