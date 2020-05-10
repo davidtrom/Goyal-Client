@@ -9,7 +9,7 @@ import { DesignBlockService } from 'src/app/service/design-block.service';
 })
 export class HeaderComponent implements OnInit {
   showDesignBlock$: boolean;
-  collapsed: boolean;
+  collapsed: boolean = true;
   
   constructor(private designService: DesignBlockService) {
     
