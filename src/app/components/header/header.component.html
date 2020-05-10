@@ -71,6 +71,9 @@
             </div>
         </nav>
         
-        <div *ngIf="showDesignBlock$" id="design-block"></div>
+        <div *ngIf="showDesignBlock$; else regBlock" id="design-block"></div>
+        <ng-template #regBlock>
+            <div id="regBlock"></div>
+        </ng-template>
     </div>
 </header>
