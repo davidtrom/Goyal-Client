@@ -7,15 +7,12 @@
 }
 
 .picture img{
-    /* padding-left: 15%; */
-    /* padding-top: 13%; */
     padding-bottom: 4%;
     position: absolute;
     top: 0;
-    left: 4%;
+    left: 0;
+    /* padding-left: 4%; */
     /* right: 10%; */
-    /* width: auto;
-    height: auto; */
     max-width: auto;
     max-height: auto;
 }
@@ -24,16 +21,10 @@ img{
     text-align: center;
 }
 
-/* #pic{
-    text-align: center;
-    padding-top: 20%;
-} */
-
 #background-info{
-    /* padding-top: 5.5%; */
     padding-right: 10%;
     padding-bottom: 4%;
-    padding-left: 5%;
+    padding-left: 8%;
     font-size: 13pt;
 }
 
