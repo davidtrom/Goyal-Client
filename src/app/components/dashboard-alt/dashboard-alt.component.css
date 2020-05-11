@@ -1,14 +1,39 @@
 
-.col-md-4{
-    text-align: center;
-    padding-top: 4%;
+.picture{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 100%;
+    overflow: hidden;
 }
 
+.picture img{
+    /* padding-left: 15%; */
+    /* padding-top: 13%; */
+    padding-bottom: 4%;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    /* right: 10%; */
+    /* width: auto;
+    height: auto; */
+    max-width: auto;
+    max-height: auto;
+}
+
+img{
+    text-align: center;
+}
+
+/* #pic{
+    text-align: center;
+    padding-top: 20%;
+} */
+
 #background-info{
-    padding-top: 5.5%;
+    /* padding-top: 5.5%; */
     padding-right: 10%;
-    padding-bottom: 7%;
-    padding-left: 4%;
+    padding-bottom: 4%;
+    padding-left: 5%;
     font-size: 13pt;
 }
 
@@ -21,4 +46,5 @@ h1{
     color: rgb(131, 97, 224);
     padding-top: 2%;
     text-align: center;
+    padding-bottom: 2%;
 }
