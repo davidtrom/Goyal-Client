@@ -60,7 +60,8 @@ export class ContactComponent implements OnInit {
       // );
 
       this.contactService.createContact(contact).subscribe(
-        data => {console.log("was email sent? ", data);     
+        data => {
+          console.log("was email sent? ", data);     
         if(data){
           alert('Your email has been sent');
         }

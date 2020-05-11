@@ -20,8 +20,8 @@ export class ContactService {
 
   createContact(contactToCreate:Contact): Observable<Boolean> {
     return this.http.post<Boolean>(this.baseUrl+"/send-email", contactToCreate, this.httpOptions)
-      .pipe(tap(data => {console.log("sending email"), 
-      catchError(this.handleError<Boolean>('send email', null))
+      .pipe(tap(data => {console.log("in service ", data), 
+      catchError(this.handleError<Boolean>('error sending email', null))
   }));
   }
 
