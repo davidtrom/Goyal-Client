@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+  
+  <!-- Full polyfill bundle for old browsers -->
+<script nomodule src="/polyfills/full.min.js"></script>
+
+<!-- Smaller polyfill bundle for browsers with ES2015+ support -->
+<script type="module" src="/polyfills/modern.min.js"></script>
+
+<!-- Bundle script. `defer` is required to execute
+     this script after the `type="module"` one -->
+<script src="/bundle.min.js" defer></script>
+
   <meta charset="utf-8">
   <title>Dr. Manju Goyal, MD Psychiatrist</title>
   <base href="/">
