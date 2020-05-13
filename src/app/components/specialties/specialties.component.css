@@ -4,9 +4,15 @@
     height: 150vh;
     max-height: fit-content;
     background-image: url(../../../assets/hyacinth2.jpg);
+    background-size: 100% 100%;
     /* background-position: center center; */
     opacity: 0.35;
     background-repeat: repeat;
+}
+
+.flex-container{
+    background-image: url(../../../assets/hyacinth2.jpg);
+    background-size: 100% 100%;
 }
 
 #specializations{
@@ -46,8 +52,9 @@ div.textDesktop{
     position: relative;
     padding-left: 10%;
     padding-right: 10%;
-    color: black;
-    margin-top: -72%;
+    /* color: black; */
+    /* margin-top: -72%; */
+    color: white;
     font-weight: bold;
 }
 
