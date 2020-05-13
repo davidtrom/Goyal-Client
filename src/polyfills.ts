@@ -18,7 +18,7 @@
  * BROWSER POLYFILLS
  */
 
-// import 'core-js/es2015';
+ import 'core-js';
 // import 'babel-polyfill';
 // import 'core-js/es6/symbol';
 // import 'core-js/es6/object';
