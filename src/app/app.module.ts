@@ -14,6 +14,7 @@ import { DashboardAltComponent } from './components/dashboard-alt/dashboard-alt.
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     ProcessComponent,
     SpecialtiesComponent,
     LocationComponent,
-    DashboardAltComponent
+    DashboardAltComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

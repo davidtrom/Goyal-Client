@@ -6,6 +6,7 @@ import { ProcessComponent } from './components/process/process.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LocationComponent } from './components/location/location.component';
 import { DashboardAltComponent } from './components/dashboard-alt/dashboard-alt.component';
+import { InfoComponent } from './components/info/info.component';
 
 const routes: Routes = [
   { path: '', component: DashboardAltComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'process', component: ProcessComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'location', component: LocationComponent},
+  { path: 'info', component: InfoComponent},
   
   
   // if no route, redirect to home
