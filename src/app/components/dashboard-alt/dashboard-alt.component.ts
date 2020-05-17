@@ -6,8 +6,7 @@ import { DesignBlockService } from 'src/app/service/design-block.service';
   templateUrl: './dashboard-alt.component.html',
   styleUrls: ['./dashboard-alt.component.css']
 })
-export class DashboardAltComponent implements OnInit {
-  
+export class DashboardAltComponent implements OnInit {  
 
   constructor(private designService: DesignBlockService) { }
 
