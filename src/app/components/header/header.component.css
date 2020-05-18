@@ -27,7 +27,7 @@ header{
 }
 
 li{
-    font-size: 15pt;
+    font-size: 11pt;
 }
 
 #design-block {
@@ -44,8 +44,6 @@ li{
 }
 
 #covidInfo{
-    font-size: 15pt;
     text-align: center;
     font-weight: bold;
-
 }
