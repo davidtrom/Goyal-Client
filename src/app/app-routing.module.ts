@@ -7,6 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LocationComponent } from './components/location/location.component';
 import { DashboardAltComponent } from './components/dashboard-alt/dashboard-alt.component';
 import { InfoComponent } from './components/info/info.component';
+import { CovidComponent } from './components/covid/covid.component';
 
 const routes: Routes = [
   { path: '', component: DashboardAltComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'location', component: LocationComponent},
   { path: 'info', component: InfoComponent},
+  { path: 'covid-19', component: CovidComponent},
   
   
   // if no route, redirect to home

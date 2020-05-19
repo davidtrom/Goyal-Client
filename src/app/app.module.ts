@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { InfoComponent } from './components/info/info.component';
+import { CovidComponent } from './components/covid/covid.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InfoComponent } from './components/info/info.component';
     SpecialtiesComponent,
     LocationComponent,
     DashboardAltComponent,
-    InfoComponent
+    InfoComponent,
+    CovidComponent
   ],
   imports: [
     BrowserModule,

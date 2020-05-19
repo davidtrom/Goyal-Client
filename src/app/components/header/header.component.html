@@ -73,16 +73,23 @@
     
 
         <!-- Button trigger modal -->
-        <div id="covidInfo">
+        <!-- <div id="covidInfo">
             ** For COVID-19 Information Updates
             <button type="button" class="btn btn-danger btn-sm" (click)="show" data-target="#exampleModalCenter">
             Click Here
             </button>
             **
+        </div> -->
+
+        <div id="covidInfo">
+            ** For COVID-19 Information Updates
+            <a type="button" class="btn btn-danger btn-sm" [routerLink]="['/covid-19']">
+            Click Here
+            </a>
         </div>
 
         <!-- Modal -->
-<!-- <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" #myModal>
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
@@ -99,7 +106,7 @@
         </div>
     </div>
     </div>
-  </div> -->
+  </div>
 
         <div *ngIf="showDesignBlock$; else regBlock" id="design-block"></div>
         <ng-template #regBlock>
