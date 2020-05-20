@@ -1,0 +1,17 @@
+.flex-container{
+    font-size: 13pt;
+}
+
+h1{
+    text-align: center;
+    color: rgb(131, 97, 224);
+    padding-top: 2%;
+}
+
+.info{
+    padding-top: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+
