@@ -1,1 +1,17 @@
-<p>login works!</p>
+
+<div class="flex-container">
+    <div class="container">
+        <div>
+            <h2>Welcome, Dr. Goyal
+            <p>
+            Login:
+            </p>
+            </h2>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <label for="password">Password:</label>
+            <input id="password" formControlName="password" type="password" class="form-control" placeholder="Password">
+        </form>
+
+    </div>
+</div>

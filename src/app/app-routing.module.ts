@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'location', component: LocationComponent},
   { path: 'info', component: InfoComponent},
   { path: 'covid-19', component: CovidComponent},
-  { path: 'doctor/login', component: LoginComponent},
+  { path: 'doctor-login', component: LoginComponent},
   { path: 'blog-post', component: BlogFormComponent},
   
   

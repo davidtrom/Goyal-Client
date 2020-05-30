@@ -16,8 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { InfoComponent } from './components/info/info.component';
 import { CovidComponent } from './components/covid/covid.component';
-import { LoginComponent } from './login/login.component';
-import { BlogFormComponent } from './blog-form/blog-form.component';
+import { LoginComponent } from './components/login/login.component';
+import { BlogFormComponent } from './components/blog-form/blog-form.component';
 
 @NgModule({
   declarations: [

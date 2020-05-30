@@ -21,6 +21,4 @@ export class Contact {
         this.preferredApptTime = preferredApptTime;
         this.message = message;
     }
-
-
 }
