@@ -8,6 +8,8 @@ import { LocationComponent } from './components/location/location.component';
 import { DashboardAltComponent } from './components/dashboard-alt/dashboard-alt.component';
 import { InfoComponent } from './components/info/info.component';
 import { CovidComponent } from './components/covid/covid.component';
+import { LoginComponent } from './components/login/login.component';
+import { BlogFormComponent } from './components/blog-form/blog-form.component';
 
 const routes: Routes = [
   { path: '', component: DashboardAltComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'location', component: LocationComponent},
   { path: 'info', component: InfoComponent},
   { path: 'covid-19', component: CovidComponent},
+  { path: 'doctor/login', component: LoginComponent},
+  { path: 'blog-post', component: BlogFormComponent},
   
   
   // if no route, redirect to home
