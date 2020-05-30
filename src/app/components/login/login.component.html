@@ -2,15 +2,33 @@
 <div class="flex-container">
     <div class="container">
         <div>
-            <h2>Welcome, Dr. Goyal
+            <h2 id="greeting">Welcome, Dr. Goyal
             <p>
             Login:
             </p>
             </h2>
         </div>
+
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <label for="password">Password:</label>
-            <input id="password" formControlName="password" type="password" class="form-control" placeholder="Password">
+            <div id="password-input">
+                <label for="password">Password:</label>
+                <input id="password" formControlName="password" type="password" class="form-control" placeholder="Password">
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div id="btnSubmit">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="cancelBtn">
+                        <a class="btn btn-primary" [routerLink]="['/']">Cancel</a>
+                    </div>
+                </div>
+        
+            
+        </div>
         </form>
 
     </div>

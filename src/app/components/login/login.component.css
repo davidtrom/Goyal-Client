@@ -1,4 +1,21 @@
 .flex-container{
     font-size: 13pt;
     padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.container{
+    max-width: 52%;
+}
+
+#greeting{
+    text-align: center;
+}
+
+#password-input{
+    padding-bottom: 3%;
+}
+
+#cancelBtn{
+    padding-top: 3%;
 }

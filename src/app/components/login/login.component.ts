@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DesignBlockService } from 'src/app/service/design-block.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { BlogPostService } from 'src/app/service/blog-post.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private designService: DesignBlockService) { }
+  constructor(private fb: FormBuilder, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
 
   ngOnInit() {
     this.designService.updateDesignBlockStatus(true);
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
   get form() { return this.loginForm.controls; }
 
   onSubmit(): void{       
-    console.log("inside onSubmit")
+    console.log("inside onSubmit ", this.loginForm.controls.password.value);
       this.loginForm.controls.password.value;
   }
 
