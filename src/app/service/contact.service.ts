@@ -22,7 +22,7 @@ export class ContactService {
     return this.http.post<Boolean>(this.baseUrl+"/send-email", contactToCreate, this.httpOptions)
       .pipe(tap(data => {console.log("in service ", data), 
       catchError(this.handleError<Boolean>('error sending email', null))
-  }));
+    }));
   }
 
   /**

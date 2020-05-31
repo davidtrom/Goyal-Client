@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DesignBlockService } from 'src/app/service/design-block.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { BlogPostService } from 'src/app/service/blog-post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
+  constructor(private router: Router, private fb: FormBuilder, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
 
   ngOnInit() {
     this.designService.updateDesignBlockStatus(true);
@@ -24,9 +25,14 @@ export class LoginComponent implements OnInit {
 
   get form() { return this.loginForm.controls; }
 
-  onSubmit(): void{       
-    console.log("inside onSubmit ", this.loginForm.controls.password.value);
-      this.loginForm.controls.password.value;
+  onSubmit(): void{  
+    console.log("inside onSubmit ", this.loginForm.controls.password.value);  
+    this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).subscribe(
+      data => {console.log("password verified? ", data);
+    if(data){
+      this.router.navigate(['/blog-post']);
+    }}
+    );    
   }
 
 }
