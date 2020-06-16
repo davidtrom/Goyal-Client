@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BlogPostService } from 'src/app/service/blog-post.service';
 
 @Component({
   selector: 'app-blog-form',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private blogPostService: BlogPostService) { }
 
   ngOnInit() {
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+      this.router.navigate(['/']);
+    }
   }
 
 }

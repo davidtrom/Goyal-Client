@@ -21,6 +21,8 @@ export class BlogPostService {
     let reqData: Object = {"password": password};
     return this.http.post<boolean>(this.baseUrl+"/verify", reqData, this.httpOptions)
       .pipe(tap(data => {console.log("verified ", data),
+        localStorage.setItem("isLoggedIn", "true"),
+        localStorage.setItem("username", "DrGoyal"),
         catchError(this.handleError<boolean>('error verifying volunteer', null))
         // if(data != null){
           //this.isLoggedIn$.next(true);

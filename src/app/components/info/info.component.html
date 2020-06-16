@@ -1,1 +1,17 @@
-<p>info works!</p>
+
+<div *ngIf="noBlog; else showBlog">
+    <div class="flex-container">
+        <div class="container">
+            <h1>Coming Soon!</h1>
+            <div>Check back in the near future for blog updates from Dr. Goyal 
+                with important information regarding medication and CBT and DBT best practices
+                among other things psychiatry related.</div>
+        </div>
+    </div>
+</div> 
+
+<ng-template #showBlog>
+    <div class="flex-container">
+        
+    </div>
+</ng-template>
