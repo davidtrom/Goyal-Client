@@ -4,14 +4,37 @@
         <div class="container">
             <h1>Coming Soon!</h1>
             <div>Check back in the near future for blog updates from Dr. Goyal 
-                with important information regarding medication and CBT and DBT best practices
-                among other things psychiatry related.</div>
+                with important information regarding medication, CBT and DBT best practices
+                and other topics psychiatry related.</div>
         </div>
     </div>
 </div> 
 
 <ng-template #showBlog>
     <div class="flex-container">
-        
+        <div class="card w-75 p-3 mx-auto" *ngFor="let blogPost of blogPosts;">
+            <div class="card-header">
+            {{blogpost.title}}
+            </div>
+            <div class="card-body">
+                    <div class= "descriptionTitle">
+                        <u>Description:</u>
+                    </div>
+                    <div class= "blogDescription">
+                        {{blogPost.description}} 
+                    </div>
+            </div>
+    
+            <div class="card-footer">
+                <div class = "row">
+                    <div class= "col-md-4">
+                        <u>Link:</u>
+                    </div>
+                    <div class= "col-md-8">
+                        {{blogPost.link}}
+                    </div>
+                </div>
+            </div>
+        </div>     
     </div>
 </ng-template>

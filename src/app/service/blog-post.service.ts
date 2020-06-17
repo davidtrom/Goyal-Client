@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { BlogPost } from '../models/blog-post.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,13 @@ export class BlogPostService {
           // sessionStorage.setItem('isLoggedIn', 'true')
         
     }));
+  }
+
+  getAllPosts() : Observable <BlogPost[]> {
+    console.log("inside blog-post service: ", this.baseUrl+"/posts")
+    return this.http.get<BlogPost[]>(this.baseUrl+"/posts", this.httpOptions)
+    .pipe(tap(data => console.log('fetch posts', data)),
+      catchError(this.handleError<BlogPost[]>('error geting blogs', null)));
   }
 
   /**
