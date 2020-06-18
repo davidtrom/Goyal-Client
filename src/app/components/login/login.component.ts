@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  invalidPassword: boolean;
 
   constructor(private router: Router, private fb: FormBuilder, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
 
@@ -36,6 +37,10 @@ export class LoginComponent implements OnInit {
       data => {console.log("password verified? ", data);
     if(data){
       this.router.navigate(['/blog-post']);
+    }
+    else{
+      this.invalidPassword = true;
+      console.log(this.invalidPassword);
     }}
     );    
   }

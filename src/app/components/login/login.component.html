@@ -17,16 +17,18 @@
                 <div *ngIf="form.password.errors && (form.password.touched || form.password.dirty)" class="invalid-feedback">
                     <div *ngIf='form.password.errors.required'>*Password is Required</div>
                 </div>
+                <div class="invalidPassword" *ngIf="invalidPassword && form.password.dirty" >*Invalid password, please try again.</div>
             </div>
+            
                 
             <div class="row">
-                <div class="col-md-3">
-                    <div id="btnSubmit">
+                <div class="col-md-3 btnSubmit">
+                    <div >
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div id="cancelBtn">
+                <div class="col-md-3 cancelBtn">
+                    <div >
                         <a class="btn btn-primary" [routerLink]="['/']" style="color: white">Cancel</a>
                     </div>
                 </div> 

@@ -16,6 +16,10 @@
     padding-bottom: 3%;
 }
 
-#cancelBtn{
-    padding-top: 3%;
+.btnSubmit{
+    padding-bottom: 2%;
+}
+
+.invalidPassword{
+    color: red;
 }
