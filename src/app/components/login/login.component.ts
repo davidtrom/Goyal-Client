@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DesignBlockService } from 'src/app/service/design-block.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { BlogPostService } from 'src/app/service/blog-post.service';
 import { Router } from '@angular/router';
 
@@ -19,12 +19,17 @@ export class LoginComponent implements OnInit {
     this.designService.updateDesignBlockStatus(true);
 
     this.loginForm = this.fb.group({
-      password: [''],
+      password: ['', Validators.required]
     });
   }
 
-  get form() { return this.loginForm.controls; }
+  // get password(){
+  //   return this.loginForm.get('password');
+  // }
 
+  
+  get form() { return this.loginForm.controls; }
+  
   onSubmit(): void{  
     console.log("inside onSubmit ", this.loginForm.controls.password.value);  
     this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).subscribe(

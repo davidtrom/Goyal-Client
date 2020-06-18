@@ -22,13 +22,9 @@ export class BlogPostService {
     let reqData: Object = {"password": password};
     return this.http.post<boolean>(this.baseUrl+"/verify", reqData, this.httpOptions)
       .pipe(tap(data => {console.log("verified ", data),
-        localStorage.setItem("isLoggedIn", "true"),
+        localStorage.setItem("drLoggedIn", "true"),
         localStorage.setItem("username", "DrGoyal"),
         catchError(this.handleError<boolean>('error verifying volunteer', null))
-        // if(data != null){
-          //this.isLoggedIn$.next(true);
-          // sessionStorage.setItem('isLoggedIn', 'true')
-        
     }));
   }
 
@@ -37,6 +33,10 @@ export class BlogPostService {
     return this.http.get<BlogPost[]>(this.baseUrl+"/posts", this.httpOptions)
     .pipe(tap(data => console.log('fetch posts', data)),
       catchError(this.handleError<BlogPost[]>('error geting blogs', null)));
+  }
+
+  logout() {
+    localStorage.clear();
   }
 
   /**

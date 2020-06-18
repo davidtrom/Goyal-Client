@@ -13,9 +13,12 @@
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div id="password-input">
                 <label for="password">Password:</label>
-                <input id="password" formControlName="password" type="password" class="form-control" placeholder="Password">
+                <input id="password" formControlName="password" type="password" class="form-control" placeholder="Password" [ngClass]="{'is-invalid': form.password.errors && (form.password.touched || form.password.dirty)}" >
+                <div *ngIf="form.password.errors && (form.password.touched || form.password.dirty)" class="invalid-feedback">
+                    <div *ngIf='form.password.errors.required'>*Password is Required</div>
+                </div>
             </div>
-
+                
             <div class="row">
                 <div class="col-md-3">
                     <div id="btnSubmit">
@@ -24,7 +27,7 @@
                 </div>
                 <div class="col-md-3">
                     <div id="cancelBtn">
-                        <a class="btn btn-primary" [routerLink]="['/']">Cancel</a>
+                        <a class="btn btn-primary" [routerLink]="['/']" style="color: white">Cancel</a>
                     </div>
                 </div> 
             </div>
