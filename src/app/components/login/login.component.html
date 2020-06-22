@@ -17,7 +17,7 @@
                 <div *ngIf="form.password.errors && (form.password.touched || form.password.dirty)" class="invalid-feedback">
                     <div *ngIf='form.password.errors.required'>*Password is Required</div>
                 </div>
-                <div class="invalidPassword" *ngIf="invalidPassword && form.password.dirty" >*Invalid password, please try again.</div>
+                <div class="invalidPassword" *ngIf="invalidPassword" >*Invalid password, please try again.</div>
             </div>
             
                 

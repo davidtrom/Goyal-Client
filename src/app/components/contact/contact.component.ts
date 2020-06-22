@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { Contact } from '../../models/contact.model';
 import { ContactService } from '../../service/contact.service';
 import { DesignBlockService } from 'src/app/service/design-block.service';
@@ -21,14 +21,14 @@ export class ContactComponent implements OnInit {
     this.designService.updateDesignBlockStatus(true);
 
     this.contactForm = this.fb.group({
-      firstName: [''],
-      lastName: [''],
-      email: [''],
-      phoneNum: [''],
-      birthDate: [''],
-      reasonForContact: [''],
-      preferredApptTime: [''],
-      message: [''],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      phoneNum: ['', Validators.required],
+      birthDate: ['', Validators.required],
+      reasonForContact: ['', Validators.required],
+      preferredApptTime: ['', Validators.required],
+      message: ['', Validators.required],
     });
   }
 
