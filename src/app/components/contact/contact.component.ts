@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
       birthDate: ['', Validators.required],
       reasonForContact: ['', Validators.required],
       preferredApptTime: ['', Validators.required],
-      message: ['', Validators.required],
+      message: [''],
     });
   }
 
