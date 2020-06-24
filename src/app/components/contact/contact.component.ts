@@ -12,6 +12,7 @@ import { DesignBlockService } from 'src/app/service/design-block.service';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
+  formNotValid: boolean;
 
   constructor(private fb: FormBuilder, private contactService: ContactService, private designService: DesignBlockService) {
    }
@@ -36,42 +37,36 @@ export class ContactComponent implements OnInit {
 
   onSubmit(): void{       
     console.log("inside onSubmit")
-        
-    let contact: Contact = new Contact(
-      null,
-      this.contactForm.controls.firstName.value,
-      this.contactForm.controls.lastName.value,
-      this.contactForm.controls.email.value,
-      this.contactForm.controls.phoneNum.value,
-      this.contactForm.controls.birthDate.value,
-      this.contactForm.controls.reasonForContact.value,
-      this.contactForm.controls.preferredApptTime.value,
-      this.contactForm.controls.message.value
-      );
+    if(this.form.valid){
+      let contact: Contact = new Contact(
+        null,
+        this.contactForm.controls.firstName.value,
+        this.contactForm.controls.lastName.value,
+        this.contactForm.controls.email.value,
+        this.contactForm.controls.phoneNum.value,
+        this.contactForm.controls.birthDate.value,
+        this.contactForm.controls.reasonForContact.value,
+        this.contactForm.controls.preferredApptTime.value,
+        this.contactForm.controls.message.value
+        );
 
-      
-
-      // this.contactService.createContact(contact).subscribe(
-      //   data => {console.log("in component", data);
-      //   console.log(this.contactForm.value);
-      //   this.contactForm.reset();
-      //   alert('Your email is sent');
-      //   }
-      // );
-
-      this.contactService.createContact(contact).subscribe(
-        data => {
-          console.log("was email sent? ", data);     
-        if(data){
-          alert('Your email has been sent');
+        this.contactService.createContact(contact).subscribe(
+          data => {
+            console.log("was email sent? ", data);     
+          if(data){
+            alert('Your email has been sent');
+          }
+          else {
+            alert('There was an error, your email has NOT been sent ' + '\n'
+            + 'Please try again.');
+          }
+          this.contactForm.reset();
         }
-        else {
-          alert('There was an error, your email has NOT been sent ' + '\n'
-          + 'Please try again.');
-        }
-        this.contactForm.reset();
-       }
-        
-      );
+        );
+    }
+    else{
+      this.formNotValid = true;
+      console.log(this.formNotValid);
+    }
   } 
 }

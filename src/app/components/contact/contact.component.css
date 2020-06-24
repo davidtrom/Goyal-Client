@@ -14,3 +14,9 @@
       color:rgb(131, 97, 224);
   }
 
+  .formNotValid{
+    color: red;
+    text-align: center;
+    padding-bottom: 2%;
+  }
+
