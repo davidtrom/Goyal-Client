@@ -22,22 +22,55 @@ export class ContactComponent implements OnInit {
     this.designService.updateDesignBlockStatus(true);
 
     this.contactForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', Validators.required],
-      phoneNum: ['', Validators.required],
+      firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      lastName: ['', [Validators.required, Validators.pattern('^[a-z. A-Z]+$')]],
+      email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%$!#+\-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$')]],
+      phoneNum: ['', [Validators.required, Validators.minLength(10)]],
       birthDate: ['', Validators.required],
       reasonForContact: ['', Validators.required],
       preferredApptTime: ['', Validators.required],
       message: [''],
     });
   }
+  
+
+  // get firstName() {
+  //   return this.contactForm.get('firstName');
+  // } 
+
+  // get lastName() {
+  //   return this.contactForm.get('lastName');
+  // } 
+
+  // get email() {
+  //   return this.contactForm.get('email');
+  // } 
+
+  // get phoneNum() {
+  //   return this.contactForm.get('phoneNum');
+  // } 
+
+  // get birthDate() {
+  //   return this.contactForm.get('birthDate');
+  // } 
+
+  // get reasonForContact() {
+  //   return this.contactForm.get('reasonForContact');
+  // } 
+
+  // get preferredApptTime() {
+  //   return this.contactForm.get('preferredApptTime');
+  // } 
+
+  // get message() {
+  //   return this.contactForm.get('message');
+  // } 
 
   get form() { return this.contactForm.controls; }
 
   onSubmit(): void{       
     console.log("inside onSubmit")
-    if(this.form.valid){
+    if(this.contactForm.valid){
       let contact: Contact = new Contact(
         null,
         this.contactForm.controls.firstName.value,
@@ -65,6 +98,7 @@ export class ContactComponent implements OnInit {
         );
     }
     else{
+      this.contactForm.markAllAsTouched();
       this.formNotValid = true;
       console.log(this.formNotValid);
     }
