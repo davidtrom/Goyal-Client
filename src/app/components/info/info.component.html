@@ -15,7 +15,7 @@
         <div class="card w-75 p-3 mx-auto" *ngFor="let blogPost of blogPosts;">
             <div class="card-header">
                 <div class="headerTitle">
-                    {{blogPost.title}}
+                    <strong>{{blogPost.title}}</strong>
                 </div>
             </div>
             <div class="card-body">
@@ -28,13 +28,8 @@
             </div>
     
             <div class="card-footer">
-                <div class = "row">
-                    <div class= "col-md-4">
-                        <u>Link:</u>
-                    </div>
-                    <div class= "col-md-8">
-                        {{blogPost.link}}
-                    </div>
+                <div class="link">
+                    <u>Link:</u> &nbsp;{{blogPost.link}}
                 </div>
             </div>
         </div>     

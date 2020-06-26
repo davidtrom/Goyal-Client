@@ -35,6 +35,13 @@ export class BlogPostService {
       catchError(this.handleError<BlogPost[]>('error geting blogs', null)));
   }
 
+  createBlogPost(blogPostToAdd: BlogPost) : Observable<BlogPost>{
+    return this.http.post<BlogPost>(this.baseUrl + "/add-post", blogPostToAdd, this.httpOptions)
+      .pipe(tap(data => {console.log("adding blog", data),
+      catchError(this.handleError<BlogPost>('error saving blog post', null))
+    }));
+  }
+
   logout() {
     localStorage.clear();
   }
