@@ -10,6 +10,7 @@ import { InfoComponent } from './components/info/info.component';
 import { CovidComponent } from './components/covid/covid.component';
 import { LoginComponent } from './components/login/login.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
+import { DocDashboardComponent } from './components/doc-dashboard/doc-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: DashboardAltComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'covid-19', component: CovidComponent},
   { path: 'doctor-login', component: LoginComponent},
   { path: 'blog-post', component: BlogFormComponent},
+  { path: 'doctor-dashboard', component: DocDashboardComponent},
   
   
   // if no route, redirect to home

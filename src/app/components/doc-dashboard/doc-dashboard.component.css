@@ -1,0 +1,14 @@
+.flex-container{
+    font-size: 13pt;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.title{
+    text-align: center;
+    color: rgb(131, 97, 224);
+}
+
+.container{
+    border: 1px, solid, rgb(131, 97, 224);
+}

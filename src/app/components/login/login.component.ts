@@ -23,11 +23,6 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
-
-  // get password(){
-  //   return this.loginForm.get('password');
-  // }
-
   
   get form() { return this.loginForm.controls; }
   
@@ -36,7 +31,7 @@ export class LoginComponent implements OnInit {
     this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).subscribe(
       data => {console.log("password verified? ", data);
     if(data){
-      this.router.navigate(['/blog-post']);
+      this.router.navigate(['/doctor-dashboard']);
     }
     else{
       this.invalidPassword = true;

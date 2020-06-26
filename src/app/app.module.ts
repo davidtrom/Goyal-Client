@@ -18,6 +18,7 @@ import { InfoComponent } from './components/info/info.component';
 import { CovidComponent } from './components/covid/covid.component';
 import { LoginComponent } from './components/login/login.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
+import { DocDashboardComponent } from './components/doc-dashboard/doc-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BlogFormComponent } from './components/blog-form/blog-form.component';
     InfoComponent,
     CovidComponent,
     LoginComponent,
-    BlogFormComponent
+    BlogFormComponent,
+    DocDashboardComponent
   ],
   imports: [
     BrowserModule,
