@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BlogPostService } from 'src/app/service/blog-post.service';
+import { DesignBlockService } from 'src/app/service/design-block.service';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-blog-form',
@@ -9,12 +11,33 @@ import { BlogPostService } from 'src/app/service/blog-post.service';
 })
 export class BlogFormComponent implements OnInit {
 
-  constructor(private router: Router, private blogPostService: BlogPostService) { }
+  addBlogForm: FormGroup;
+
+  constructor(private designService: DesignBlockService, private router: Router, private blogPostService: BlogPostService, private fb: FormBuilder) { }
 
   ngOnInit() {
-    if(localStorage.getItem("isLoggedIn") !== "true"){
+    if(localStorage.getItem("drLoggedIn") !== "true"){
       this.router.navigate(['/']);
     }
+
+    this.designService.updateDesignBlockStatus(true);
+
+    this.addBlogForm = this.fb.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      link: ['', Validators.required]
+    });
+  }
+
+  get form() { return this.addBlogForm.controls; }
+
+  onSubmit(){
+    
+  }
+
+  signOut(){
+    this.blogPostService.logout();
+    this.router.navigate(['/']);
   }
 
 }

@@ -32,39 +32,6 @@ export class ContactComponent implements OnInit {
       message: [''],
     });
   }
-  
-
-  // get firstName() {
-  //   return this.contactForm.get('firstName');
-  // } 
-
-  // get lastName() {
-  //   return this.contactForm.get('lastName');
-  // } 
-
-  // get email() {
-  //   return this.contactForm.get('email');
-  // } 
-
-  // get phoneNum() {
-  //   return this.contactForm.get('phoneNum');
-  // } 
-
-  // get birthDate() {
-  //   return this.contactForm.get('birthDate');
-  // } 
-
-  // get reasonForContact() {
-  //   return this.contactForm.get('reasonForContact');
-  // } 
-
-  // get preferredApptTime() {
-  //   return this.contactForm.get('preferredApptTime');
-  // } 
-
-  // get message() {
-  //   return this.contactForm.get('message');
-  // } 
 
   get form() { return this.contactForm.controls; }
 
@@ -100,7 +67,6 @@ export class ContactComponent implements OnInit {
     else{
       this.contactForm.markAllAsTouched();
       this.formNotValid = true;
-      console.log(this.formNotValid);
     }
   } 
 }
