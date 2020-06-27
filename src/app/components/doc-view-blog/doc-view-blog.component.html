@@ -1,0 +1,49 @@
+
+<div *ngIf="noBlog; else docHasBlog">
+    <div class="flex-container"></div>
+
+</div>
+
+<ng-template #docHasBlog>
+    <div class="flex-container">
+        <div class="card w-75 p-3 mx-auto" *ngFor="let blogPost of blogPosts;">
+            <div class="card-header">
+                <div class="headerTitle">
+                    <strong>{{blogPost.title}}</strong>
+                </div>
+            </div>
+            <div class="card-body">
+                    <div class= "descriptionTitle">
+                        <u>Description:</u>
+                    </div>
+                    <div class= "blogDescription">
+                        {{blogPost.description}} 
+                    </div>
+                    <br>
+                    <div class="link">
+                        <u>Link:</u> &nbsp;{{blogPost.link}}
+                    </div>
+            </div>
+
+            <div class="card-footer">
+                <div class="row buttons">
+                    <div class="col-md-2 deleteBtn">
+                        <div>
+                            <button type="button" class="btn btn-danger" (click)="deleteBlog(blogPost.id)">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 editBtn">
+                        <a [routerLink]="['/blog-post', blogPost.id]" type="button" class="btn btn-warning">Edit</a>
+                    </div>
+
+                    <div class="col-md-2 consoleBtn">
+                        <a type="button" class="btn btn-info" id="consoleBtn" [routerLink]="['/doctor-dashboard']">
+                            Console
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+</ng-template>

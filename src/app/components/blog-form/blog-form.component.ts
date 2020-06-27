@@ -46,11 +46,13 @@ export class BlogFormComponent implements OnInit {
         data => {
           if(data !== null){
             alert('Your Blog Post has been saved');
+            this.router.navigate(['/doctor-dashboard'])
           }
           else{
             alert('There was an error saving your Blog Post.  Please try again.');
           }
           this.addBlogForm.reset();
+          this.formNotValid = false;
         }
       );
     }

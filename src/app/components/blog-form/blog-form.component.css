@@ -21,3 +21,18 @@
     text-align: center;
     padding-bottom: 2%;
   }
+
+  #btnSubmit{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+  #consoleBtn{
+      padding-top: 0.5%;
+      padding-bottom: 0.5%;
+  }
+
+  #signOutBtn{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }

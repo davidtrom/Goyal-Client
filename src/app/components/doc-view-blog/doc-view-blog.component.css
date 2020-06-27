@@ -1,0 +1,19 @@
+.flex-container{
+    font-size: 13pt;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.deleteBtn{
+    padding-top: 0.5%;
+}
+
+.editBtn{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.consoleBtn{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}

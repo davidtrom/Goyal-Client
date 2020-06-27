@@ -12,8 +12,8 @@ import { LoginComponent } from './components/login/login.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
 import { DocDashboardComponent } from './components/doc-dashboard/doc-dashboard.component';
 import { DesignBlockService } from './service/design-block.service';
-import { DocViewBlogComponent } from './doc-view-blog/doc-view-blog.component';
-import { EditBlogComponent } from './edit-blog/edit-blog.component';
+import { DocViewBlogComponent } from './components/doc-view-blog/doc-view-blog.component';
+import { EditBlogComponent } from './components/edit-blog/edit-blog.component';
 
 const routes: Routes = [
   { path: '', component: DashboardAltComponent},
@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'blog-post', component: BlogFormComponent},
   { path: 'doctor-dashboard', component: DocDashboardComponent},
   { path: 'doctor-blog', component: DocViewBlogComponent},
-  { path: 'edit-blog', component: EditBlogComponent},
+  { path: 'edit-blog/:id', component: EditBlogComponent},
   
   
   // if no route, redirect to home

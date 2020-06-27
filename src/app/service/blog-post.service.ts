@@ -37,11 +37,18 @@ export class BlogPostService {
 
   createBlogPost(blogPostToAdd: BlogPost) : Observable<BlogPost>{
     return this.http.post<BlogPost>(this.baseUrl + "/add-post", blogPostToAdd, this.httpOptions)
-      .pipe(tap(data => {console.log("adding blog", data),
+      .pipe(tap(data => {console.log("adding blog ", data),
       catchError(this.handleError<BlogPost>('error saving blog post', null))
     }));
   }
 
+  deletePost(blogPostId: number) : Observable<Boolean>{
+    return this.http.delete<Boolean>(this.baseUrl + `/delete-post/${blogPostId}`,this.httpOptions)
+      .pipe(tap(data => {console.log("deleting post ", data),
+      catchError(this.handleError<Boolean>('error deleting blog post ', null))
+    }));
+  }
+  
   logout() {
     localStorage.clear();
   }

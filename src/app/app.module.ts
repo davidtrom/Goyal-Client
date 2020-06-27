@@ -19,8 +19,8 @@ import { CovidComponent } from './components/covid/covid.component';
 import { LoginComponent } from './components/login/login.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
 import { DocDashboardComponent } from './components/doc-dashboard/doc-dashboard.component';
-import { DocViewBlogComponent } from './doc-view-blog/doc-view-blog.component';
-import { EditBlogComponent } from './edit-blog/edit-blog.component';
+import { DocViewBlogComponent } from './components/doc-view-blog/doc-view-blog.component';
+import { EditBlogComponent } from './components/edit-blog/edit-blog.component';
 
 @NgModule({
   declarations: [

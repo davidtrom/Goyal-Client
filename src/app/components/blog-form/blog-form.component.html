@@ -44,23 +44,23 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-2">
-                        <div class="form-group" id="btnSubmit">                 
+                    <div class="col-md-2" id="btnSubmit">
+                        <div class="form-group">                 
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
-                        <div class="signOutBtn">
+                    
+                    <div class="col-md-2" id="consoleBtn">
+                        <a  type="button" class="btn btn-info" [routerLink]="['/doctor-dashboard']">
+                            Console
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-2" id="signOutBtn">
+                        <div >
                             <button type="button" class="btn btn-info" (click)="signOut()">Sign Out</button>
                         </div>
                     </div>
-                    
-                    <div class="col-md-2">
-                        <a type="button" class="btn btn-info" [routerLink]="['/doctor-dashboard']">
-                            Console
-                        </a>
-                    </div>  
                 </div>
             </div>
         </form>
