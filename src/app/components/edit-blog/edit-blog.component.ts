@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DesignBlockService } from 'src/app/service/design-block.service';
 import { BlogPostService } from 'src/app/service/blog-post.service';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-blog',
@@ -10,7 +11,9 @@ import { BlogPostService } from 'src/app/service/blog-post.service';
 })
 export class EditBlogComponent implements OnInit {
 
-  constructor(private router: Router, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
+  editBlogForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private router: Router, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
 
   ngOnInit() {
     if(localStorage.getItem("drLoggedIn") !== "true"){
@@ -19,6 +22,10 @@ export class EditBlogComponent implements OnInit {
 
     this.designService.updateDesignBlockStatus(true);
     
+  }
+
+  get form() {
+    return this.editBlogForm.controls;
   }
 
 }
