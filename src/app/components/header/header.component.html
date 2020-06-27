@@ -71,11 +71,15 @@
         </nav>
 
         <div id="covidInfo">
-            ** For COVID-19 Information Updates
-            <a type="button" class="btn btn-danger btn-sm" [routerLink]="['/covid-19']">
-            Click Here
-            </a>
-            **
+            <div class="row ">
+                <div class="col-md-12">
+                    ** For COVID-19 Information Updates
+                    <a type="button" class="btn btn-danger btn-sm" [routerLink]="['/covid-19']">
+                    Click Here
+                    </a>
+                    **
+                </div>
+            </div>
         </div>
 
         <div *ngIf="showDesignBlock$; else regBlock" id="design-block"></div>
