@@ -22,17 +22,7 @@
     padding-bottom: 2%;
   }
 
-  #btnSubmit{
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-  }
-
-  #consoleBtn{
-      padding-top: 0.5%;
-      padding-bottom: 0.5%;
-  }
-
-  #signOutBtn{
+  .submitBtn, .consoleBtn, .signOutBtn{
     padding-top: 0.5%;
     padding-bottom: 0.5%;
   }
