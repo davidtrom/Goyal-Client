@@ -1,16 +1,14 @@
 
 <div class="flex-container">
+    <div class="title">
+        <h1>Edit Blog Post:</h1>
+    </div>
+
     <div class="container">
-        <div class="title">
-            <h1>Edit Blog Post:</h1>
-        </div>
 
         <form [formGroup]="editBlogForm" (ngSubmit)="onSubmit()">
-            <!-- <div class="form-group">
-                <label for="newTitle"><strong><u>Updated Title:</u></strong></label>
-                <input type="text" formControlName = "newTitle" class="form-control" id="newTitle" aria-describedby="emailHelp" placeholder="">
-            </div> -->
-            
+            <div class="panel panel-default">
+
             <div class="form-group">
                 <label for="title"><strong>Title:*</strong></label>
                 <input id="title" formControlName="title" type="text" class="form-control" [ngClass]="{'is-invalid': form.title.errors && (form.title.touched || form.title.dirty)}">
@@ -29,7 +27,7 @@
     
             <div class="form-group">
                 <label for="link"><strong>Link:*</strong></label>
-                <input type="link" formControlName="link" class="form-control" id="link" [ngClass]="{'is-invalid': form.link.errors && (form.link.touched || form.link.dirty)}">
+                <input type="url" formControlName="link" class="form-control" id="link" [ngClass]="{'is-invalid': form.link.errors && (form.link.touched || form.link.dirty)}">
                 <div *ngIf="form.link.errors && (form.link.touched || form.link.dirty)" class="invalid-feedback">
                     <div *ngIf='form.link.errors.required'>*link is Required</div>
                     <div *ngIf='form.link.errors.pattern'>*Please Enter a Valid link Address</div>
@@ -40,33 +38,17 @@
                 *Please enter all required fields before submitting
             </div>
 
-        <!-- <div id="currentPost"><strong><u>Current Blog Post:</u></strong></div>
-        <div id="title">
-            {{blogPost.title}}
-        </div>
-        <div id="description">
-            {{blogPost.description}}
-        </div>
-        <div id="link">
-            {{blogPost.link}}
-        </div>-->
-
-        
-                
-    
              <div class="row">
                 <div class="col-md-3" id="btnSubmit">
-                    <button type="submit" class="btn btn-primary">Update Email</button>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Update Post</button>
+                    </div>
                 </div>  
                 <div class="col-md-3" id="backBtn">
-                    <a type="button" class="btn btn-primary" [routerLink]="['/view-profile']">Profile</a>
+                    <a type="button" class="btn btn-info" style="color: white" [routerLink]="['/doctor-blog']">Blog Posts</a>
                 </div>
             </div> 
-
-            <!-- </div> --> 
-        </form> 
-       
-        
+        </div>
+        </form>   
     </div> 
-
 </div>

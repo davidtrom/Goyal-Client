@@ -4,18 +4,9 @@
     padding-bottom: 2%;
 }
 
-.deleteBtn{
-    padding-top: 0.5%;
-}
-
-.editBtn{
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-}
-
-.consoleBtn{
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+.editBtn, .consoleBtn, .signOutBtn, .deleteBtn{
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
 }
 
 .noBlogText{
@@ -23,6 +14,12 @@
     padding-bottom: 3%;
 }
 
-.addBlogBtn{
+/* .addBlogBtn{
     text-align: center;
+} */
+
+.title{
+    text-align: center;
+    padding-bottom: 2%;
+    color: rgb(131, 97, 224);
 }

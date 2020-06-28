@@ -61,8 +61,9 @@ export class BlogPostService {
     return this.http.get<BlogPost>(this.baseUrl + `/display-blog/${id}`, this.httpOptions)
       .pipe(tap(data => {
         console.log("fetching blog post ", data);
-        this.blogPost = data;
-        this.currentBlogPost$.next(this.blogPost);
+        // this.blogPost = data;
+        // this.currentBlogPost$.next(this.blogPost);
+        // console.log("currentBlogPost$: ", this.currentBlogPost$);
       catchError(this.handleError<BlogPost>('error fetching blog post ', null))  
     }));
   }
@@ -78,7 +79,7 @@ export class BlogPostService {
   getCurrentBlogPost(): Observable<BlogPost>{
     return this.currentBlogPost$.asObservable();
   }
-  
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

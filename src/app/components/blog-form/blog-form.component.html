@@ -7,9 +7,7 @@
         </div>
     </div>
 
-    
-
-     <div class="container">
+    <div class="container">
         
         <form [formGroup]="addBlogForm" (ngSubmit)="onSubmit()">
             <div class="panel panel-default">
@@ -32,7 +30,7 @@
         
                 <div class="form-group">
                     <label for="link"><strong>Link:*</strong></label>
-                    <input type="link" formControlName="link" class="form-control" id="link" placeholder="https://www.psychologytoday.com/my-article" [ngClass]="{'is-invalid': form.link.errors && (form.link.touched || form.link.dirty)}">
+                    <input type="url" formControlName="link" class="form-control" id="link" placeholder="https://www.psychologytoday.com/my-article" [ngClass]="{'is-invalid': form.link.errors && (form.link.touched || form.link.dirty)}">
                     <div *ngIf="form.link.errors && (form.link.touched || form.link.dirty)" class="invalid-feedback">
                         <div *ngIf='form.link.errors.required'>*link is Required</div>
                         <div *ngIf='form.link.errors.pattern'>*Please Enter a Valid link Address</div>
@@ -51,9 +49,11 @@
                     </div>
                     
                     <div class="col-md-2" id="consoleBtn">
-                        <a  type="button" class="btn btn-info" [routerLink]="['/doctor-dashboard']">
-                            Console
-                        </a>
+                        <div>
+                            <a  type="button" class="btn btn-info" [routerLink]="['/doctor-dashboard']">
+                                Console
+                            </a>
+                        </div>
                     </div>
                     
                     <div class="col-md-2" id="signOutBtn">

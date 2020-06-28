@@ -19,6 +19,9 @@
 
 <ng-template #docHasBlog>
     <div class="flex-container">
+        <div class="title">
+            <h1>Current Blog Posts:</h1>
+        </div>
         <div class="card w-75 p-3 mx-auto" *ngFor="let blogPost of blogPosts;">
             <div class="card-header">
                 <div class="headerTitle">
@@ -48,20 +51,20 @@
 
                     <div class="col-md-2 editBtn">
                         <div>
-                            <button type="button" class="btn btn-warning" (click)="editBlog(blogPost.id)">Edit</button>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-md-2 editBtn">
-                        <div>
                             <a [routerLink]="['/edit-blog', blogPost.id]" type="button" class="btn btn-warning">Edit</a>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="col-md-2 consoleBtn">
                         <a type="button" class="btn btn-info" id="consoleBtn" [routerLink]="['/doctor-dashboard']">
                             Console
                         </a>
+                    </div>
+
+                    <div class="col-md-2 signOutBtn">
+                        <div>
+                            <button type="button" class="btn btn-secondary" (click)="signOut()">Sign Out</button>
+                        </div>    
                     </div>
                 </div>
             </div>

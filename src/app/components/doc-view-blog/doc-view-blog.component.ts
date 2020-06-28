@@ -53,11 +53,11 @@ export class DocViewBlogComponent implements OnInit {
     }); 
   }
 
-  editBlog(id: number){
-    this.blogPostService.getBlogPostById(id).subscribe(data => {
-      console.log(data);
-    });
-    this.router.navigate(['/edit-blog']);
-  }
+  // editBlog(id: number){
+  //   this.blogPostService.getBlogPostById(id).subscribe(data => {
+  //     console.log(data);
+  //   });
+  //   this.router.navigate(['/edit-blog', blogPost.id]);
+  // }
 
 }

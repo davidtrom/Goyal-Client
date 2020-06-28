@@ -8,3 +8,8 @@
     text-align: center;
     color: rgb(131, 97, 224);
 }
+
+#btnSubmit, #backBtn{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
