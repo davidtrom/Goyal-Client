@@ -26,8 +26,7 @@ export class LoginComponent implements OnInit {
   
   get form() { return this.loginForm.controls; }
   
-  onSubmit(): void{  
-    console.log("inside onSubmit ", this.loginForm.controls.password.value);  
+  onSubmit(): void{   
     this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).subscribe(
       data => {console.log("password verified? ", data);
     if(data){

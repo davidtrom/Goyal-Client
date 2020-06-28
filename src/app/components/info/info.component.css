@@ -12,3 +12,9 @@ h1{
 .headerTitle{
     font-size: 14pt;
 }
+
+.title{
+    text-align: center;
+    color:rgb(131, 97, 224);
+    padding-bottom: 2%;
+}
