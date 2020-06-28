@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, BehaviorSubject } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -11,12 +11,16 @@ import { BlogPost } from '../models/blog-post.model';
 export class BlogPostService {
 
   baseUrl = environment.baseUrl;
+  blogPost: BlogPost;
+  private currentBlogPost$: BehaviorSubject<BlogPost>;
   httpOptions = {
     headers: new HttpHeaders({'Content-Type' : 'application/json'})
   }
   isLoggedIn: boolean;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.currentBlogPost$ = new BehaviorSubject<BlogPost>(null);
+   }
 
   verifyDoctor(password:string) : Observable<boolean>{
     let reqData: Object = {"password": password};
@@ -53,6 +57,28 @@ export class BlogPostService {
     localStorage.clear();
   }
 
+  getBlogPostById(id: number): Observable<BlogPost>{
+    return this.http.get<BlogPost>(this.baseUrl + `/display-blog/${id}`, this.httpOptions)
+      .pipe(tap(data => {
+        console.log("fetching blog post ", data);
+        this.blogPost = data;
+        this.currentBlogPost$.next(this.blogPost);
+      catchError(this.handleError<BlogPost>('error fetching blog post ', null))  
+    }));
+  }
+
+  updateBlogPost(id: number, title: string, description: string, link: string): Observable<BlogPost>{
+    let reqData: Object = {"title": title, "description": description, "link": link}
+    return this.http.post<BlogPost>(this.baseUrl + `/blog-post/update/${id}`, reqData, this.httpOptions)
+      .pipe(tap(data => {console.log("updating blog post ", data),
+      catchError(this.handleError<BlogPost>('error updating blog post ', null))
+    }));
+  }
+
+  getCurrentBlogPost(): Observable<BlogPost>{
+    return this.currentBlogPost$.asObservable();
+  }
+  
   /**
    * Handle Http operation that failed.
    * Let the app continue.

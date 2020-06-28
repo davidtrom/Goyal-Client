@@ -17,3 +17,12 @@
     padding-top: 0.5%;
     padding-bottom: 0.5%;
 }
+
+.noBlogText{
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.addBlogBtn{
+    text-align: center;
+}

@@ -1,6 +1,19 @@
 
 <div *ngIf="noBlog; else docHasBlog">
-    <div class="flex-container"></div>
+    <div class="flex-container">
+        <div class="container">
+            <div class="noBlogText">
+                You currently have not posted any blogs to your site.  Post a blog and 
+                you will be able to edit or delete them here.
+            </div>
+
+            <div class="addBlogBtn">
+                <a type="button" class="btn btn-success" [routerLink]="['/blog-post']">
+                    Add Blog
+                </a>
+            </div>
+        </div>
+    </div>
 
 </div>
 
@@ -34,8 +47,16 @@
                     </div>
 
                     <div class="col-md-2 editBtn">
-                        <a [routerLink]="['/edit-blog', blogPost.id]" type="button" class="btn btn-warning">Edit</a>
+                        <div>
+                            <button type="button" class="btn btn-warning" (click)="editBlog(blogPost.id)">Edit</button>
+                        </div>
                     </div>
+
+                    <!-- <div class="col-md-2 editBtn">
+                        <div>
+                            <a [routerLink]="['/edit-blog', blogPost.id]" type="button" class="btn btn-warning">Edit</a>
+                        </div>
+                    </div> -->
 
                     <div class="col-md-2 consoleBtn">
                         <a type="button" class="btn btn-info" id="consoleBtn" [routerLink]="['/doctor-dashboard']">

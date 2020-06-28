@@ -17,3 +17,8 @@
     text-align: center;
     padding-top: 2%;
 }
+
+.addBtn, .viewBtn, .signOutBtn{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}

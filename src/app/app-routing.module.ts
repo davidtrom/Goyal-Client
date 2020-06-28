@@ -28,7 +28,8 @@ const routes: Routes = [
   { path: 'blog-post', component: BlogFormComponent},
   { path: 'doctor-dashboard', component: DocDashboardComponent},
   { path: 'doctor-blog', component: DocViewBlogComponent},
-  { path: 'edit-blog/:id', component: EditBlogComponent},
+  // { path: 'edit-blog/:id', component: EditBlogComponent},
+  { path: 'edit-blog', component: EditBlogComponent},
   
   
   // if no route, redirect to home

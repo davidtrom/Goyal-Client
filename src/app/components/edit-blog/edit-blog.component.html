@@ -6,9 +6,38 @@
         </div>
 
         <form [formGroup]="editBlogForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="newTitle"><strong><u>Updated Title:</u></strong></label>
                 <input type="text" formControlName = "newTitle" class="form-control" id="newTitle" aria-describedby="emailHelp" placeholder="">
+            </div> -->
+            
+            <div class="form-group">
+                <label for="title"><strong>Title:*</strong></label>
+                <input id="title" formControlName="title" type="text" class="form-control" [ngClass]="{'is-invalid': form.title.errors && (form.title.touched || form.title.dirty)}">
+                <div *ngIf="form.title.errors && (form.title.touched || form.title.dirty)" class="invalid-feedback">
+                    <div *ngIf='form.title.errors.required'>*Title is Required</div>    
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="description"><strong>Description:*</strong></label>
+                <textarea rows="5" style="height:100%;" id="description" formControlName="description" type="text" class="form-control" [ngClass]="{'is-invalid': form.description.errors && (form.description.touched || form.description.dirty)}"></textarea>
+                <div *ngIf="form.description.errors && (form.description.touched || form.description.dirty)" class="invalid-feedback">
+                    <div *ngIf='form.description.errors.required'>*A Blog Post is Required</div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="link"><strong>Link:*</strong></label>
+                <input type="link" formControlName="link" class="form-control" id="link" [ngClass]="{'is-invalid': form.link.errors && (form.link.touched || form.link.dirty)}">
+                <div *ngIf="form.link.errors && (form.link.touched || form.link.dirty)" class="invalid-feedback">
+                    <div *ngIf='form.link.errors.required'>*link is Required</div>
+                    <div *ngIf='form.link.errors.pattern'>*Please Enter a Valid link Address</div>
+                </div>
+            </div>
+
+            <div *ngIf="formNotValid" class="formNotValid">
+                *Please enter all required fields before submitting
             </div>
 
         <!-- <div id="currentPost"><strong><u>Current Blog Post:</u></strong></div>
@@ -20,21 +49,21 @@
         </div>
         <div id="link">
             {{blogPost.link}}
-        </div>
+        </div>-->
 
         
                 
     
-            <div class="row">
+             <div class="row">
                 <div class="col-md-3" id="btnSubmit">
                     <button type="submit" class="btn btn-primary">Update Email</button>
                 </div>  
                 <div class="col-md-3" id="backBtn">
                     <a type="button" class="btn btn-primary" [routerLink]="['/view-profile']">Profile</a>
                 </div>
-            </div>
+            </div> 
 
-            </div> -->
+            <!-- </div> --> 
         </form> 
        
         

@@ -8,17 +8,21 @@
     <div class="container">
         <div class="row buttons">
             <div class="col-md-4">
-                <a type="button" class="btn btn-success" [routerLink]="['/blog-post']">
-                    Add Blog
-                </a>
+                <div class="addBtn">
+                    <a type="button" class="btn btn-success" [routerLink]="['/blog-post']">
+                        Add Blog
+                    </a>
+                </div>
             </div>
             <div class="col-md-4">
-                <a type="button" class="btn btn-warning" [routerLink]="['/doctor-blog']">
-                    View/Edit Posts
-                </a>
+                <div class="viewBtn">
+                    <a type="button" class="btn btn-warning" [routerLink]="['/doctor-blog']">
+                        View/Edit Posts
+                    </a>
+                </div>
             </div>
             <div class="col-md-4">
-                <div >
+                <div class="signOutBtn">
                     <button type="button" class="btn btn-danger" (click)="signOut()">Sign Out</button>
                 </div>    
             </div>

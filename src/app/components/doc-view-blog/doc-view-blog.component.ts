@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class DocViewBlogComponent implements OnInit {
 
   blogPosts: any[]
-  noBlog: boolean = true;
+  noBlog: boolean;
 
 
   constructor(private router: Router, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
@@ -29,8 +29,9 @@ export class DocViewBlogComponent implements OnInit {
     this.blogPostService.getAllPosts().subscribe(data => {
       if(data !== null){
         this.noBlog=false;
+        this.blogPosts = data;
       }
-      this.blogPosts = data;
+      else{this.noBlog = true;}  
     });
   }
 
@@ -50,6 +51,13 @@ export class DocViewBlogComponent implements OnInit {
         alert('There was an error deleting this Blog Post. Please try again');
       }
     }); 
+  }
+
+  editBlog(id: number){
+    this.blogPostService.getBlogPostById(id).subscribe(data => {
+      console.log(data);
+    });
+    this.router.navigate(['/edit-blog']);
   }
 
 }
