@@ -12,14 +12,12 @@ export class BlogPostService {
 
   baseUrl = environment.baseUrl;
   blogPost: BlogPost;
-  private currentBlogPost$: BehaviorSubject<BlogPost>;
   httpOptions = {
     headers: new HttpHeaders({'Content-Type' : 'application/json'})
   }
   isLoggedIn: boolean;
 
   constructor(private http: HttpClient) {
-    this.currentBlogPost$ = new BehaviorSubject<BlogPost>(null);
    }
 
   verifyDoctor(password:string) : Observable<boolean>{
@@ -61,9 +59,6 @@ export class BlogPostService {
     return this.http.get<BlogPost>(this.baseUrl + `/display-blog/${id}`, this.httpOptions)
       .pipe(tap(data => {
         console.log("fetching blog post ", data);
-        // this.blogPost = data;
-        // this.currentBlogPost$.next(this.blogPost);
-        // console.log("currentBlogPost$: ", this.currentBlogPost$);
       catchError(this.handleError<BlogPost>('error fetching blog post ', null))  
     }));
   }
@@ -74,10 +69,6 @@ export class BlogPostService {
       .pipe(tap(data => {console.log("updating blog post ", data),
       catchError(this.handleError<BlogPost>('error updating blog post ', null))
     }));
-  }
-
-  getCurrentBlogPost(): Observable<BlogPost>{
-    return this.currentBlogPost$.asObservable();
   }
 
   /**
