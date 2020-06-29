@@ -37,14 +37,14 @@
                         </a>
                     </li>
 
-                    <!-- <li class="nav-item dropdown" ngbDropdown>
-                        <button class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                    <li class="nav-item dropdown" ngbDropdownToggle>
+                        <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Action</a>
                           <a class="dropdown-item" href="#">Another action</a>
                           <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                      </li> -->
+                      </li>
 
                     <!-- <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
                         <a class="nav-link" a [routerLink]="['/process']" routerLinkActive="router-link-active" style="color:black"  role="button" (click)="collapse()">
@@ -57,19 +57,43 @@
                           </div>
                     </li> -->
 
-                    <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+                    <!-- <li class="nav-item" ngbDropdown>
+                        <button class="dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false" style="color:black" (click)="collapse()">
+                        Process  
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" a [routerLink]="['/process']">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+
+                    </li> -->
+
+                    <!-- <li class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown link
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+
+                    <li class="nav-item" ngbDropdown>
                         <a class="nav-link" a [routerLink]="['/process']" routerLinkActive="router-link-active" style="color:black"  role="button" (click)="collapse()">
                         Process  
                         </a>
                     </li>
 
-                    <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+                    <li class="nav-item" ngbDropdown>
                         <a class="nav-link" a [routerLink]="['/insurance']" routerLinkActive="router-link-active" style="color:black"  role="button" (click)="collapse()">
                             Insurance  
                         </a>
                     </li>
                     
-                    <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+                    <li class="nav-item" ngbDropdown>
                         <a class="nav-link" a [routerLink]="['/location']" routerLinkActive="router-link-active"  style="color:black" role="button" (click)="collapse()">
                             Location  
                         </a> 
