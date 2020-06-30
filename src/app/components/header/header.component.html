@@ -37,14 +37,25 @@
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown" ngbDropdownToggle>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="color: black" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" a [routerLink]="['/info']" (click)="collapse()">Blog</a>
+                          <a class="dropdown-item" a [routerLink]="['/covid-19']"(click)="collapse()">COVID-19</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                      </li>
+
+                    <!-- <li class="nav-item dropdown" ngbDropdownToggle>
                         <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Action</a>
                           <a class="dropdown-item" href="#">Another action</a>
                           <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                      </li>
+                      </li> -->
 
                     <!-- <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
                         <a class="nav-link" a [routerLink]="['/process']" routerLinkActive="router-link-active" style="color:black"  role="button" (click)="collapse()">

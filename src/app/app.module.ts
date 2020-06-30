@@ -22,6 +22,7 @@ import { DocDashboardComponent } from './components/doc-dashboard/doc-dashboard.
 import { DocViewBlogComponent } from './components/doc-view-blog/doc-view-blog.component';
 import { EditBlogComponent } from './components/edit-blog/edit-blog.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,5 +1,6 @@
 .flex-container{
     font-size: 13pt;
+    padding-bottom: 2%;
 }
 
 h1{
@@ -12,6 +13,11 @@ h1{
     padding-top: 1%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
+}
+
+.teleHealthInfo{
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
