@@ -58,7 +58,7 @@ export class BlogPostService {
   getBlogPostById(id: number): Observable<BlogPost>{
     return this.http.get<BlogPost>(this.baseUrl + `/display-blog/${id}`, this.httpOptions)
       .pipe(tap(data => {
-        console.log("fetching blog post ", data);
+        console.log("fetching blog post ");
       catchError(this.handleError<BlogPost>('error fetching blog post ', null))  
     }));
   }
