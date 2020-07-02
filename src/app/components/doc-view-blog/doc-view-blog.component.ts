@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class DocViewBlogComponent implements OnInit {
 
   blogPosts: any[]
-  noBlog: boolean;
+  noBlog: boolean =null;
 
 
   constructor(private router: Router, private designService: DesignBlockService, private blogPostService: BlogPostService) { }
@@ -25,14 +25,15 @@ export class DocViewBlogComponent implements OnInit {
     this.getBlogPosts();
   }
 
-  getBlogPosts(){
-    this.blogPostService.getAllPosts().subscribe(data => {
-      if(data !== null){
-        this.noBlog=false;
-        this.blogPosts = data;
-      }
-      else{this.noBlog = true;}  
-    });
+  async getBlogPosts(){
+    var data = await this.blogPostService.getAllPosts().toPromise();
+    // this.blogPostService.getAllPosts().subscribe(data => {
+    if(data.length === 0){
+      this.noBlog = true;
+    }
+    else{
+      this.blogPosts = data;
+    }
   }
 
   signOut(){

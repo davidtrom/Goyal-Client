@@ -26,9 +26,12 @@ export class LoginComponent implements OnInit {
   
   get form() { return this.loginForm.controls; }
   
-  onSubmit(): void{   
-    this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).subscribe(
-      data => {console.log("password verified? ", data);
+  async onSubmit(){   
+    var data = await this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).toPromise();
+
+    // this.blogPostService.verifyDoctor(this.loginForm.controls.password.value).subscribe(
+    //   data => {console.log("password verified? ", data);
+    console.log("data from service ", data);
     if(data){
       this.router.navigate(['/doctor-dashboard']);
     }
@@ -36,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.invalidPassword = true;
       console.log(this.invalidPassword);
     }}
-    );    
-  }
+    // );    
+  // }
 
 }
