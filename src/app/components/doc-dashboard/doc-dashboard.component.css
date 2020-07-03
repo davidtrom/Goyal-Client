@@ -9,10 +9,6 @@
     color: rgb(131, 97, 224);
 }
 
-.container{
-    border: 1px, solid, rgb(131, 97, 224);
-}
-
 .buttons{
     text-align: center;
     padding-top: 2%;
@@ -20,5 +16,5 @@
 
 .addBtn, .viewBtn, .signOutBtn{
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 3%;
 }
